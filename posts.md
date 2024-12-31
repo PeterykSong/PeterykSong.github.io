@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: single
 title: "All Posts & Pages"
 permalink: /posts/
 
