@@ -115,7 +115,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "송영국, Youngkouk Song, Peter"
+  name             : "송영국,<br>Youngkouk Song,<br>Peter"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "You might want to sing it"
   location         : "Korea, South."
