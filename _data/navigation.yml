@@ -5,7 +5,7 @@ main:
    - title: "About"
      url: /about/
    - title: "Posts"
-     url: /_posts/
+     url: /posts/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
