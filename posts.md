@@ -1,5 +1,6 @@
 ---
 layout: single
+sidebar: true
 title: "All Posts & Pages"
 permalink: /posts/
 
