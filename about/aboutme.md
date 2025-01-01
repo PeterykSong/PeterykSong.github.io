@@ -4,8 +4,8 @@ title: "About Me"
 permalink: /about/aboutme/
 style: |
   body {
-    font-size: 12px; /* 본문 글자 크기 지정 */
-    line-height: 1.6; /* 줄 간격 설정 */
+    font-size: 12px !important; /* 본문 글자 크기 지정 */
+    line-height: 1.6 !important; /* 줄 간격 설정 */
   }
 ---
 
@@ -41,8 +41,11 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 > - System structure design  
 > - Hardware design<br>
 > <br>
+<p align="center">
 <img src="/about/LG_Q9.jpg" width="450px" title="LGQ9" alt="LG Q9">
+</p>
 <br>
+
 > #### 상업용 청소로봇 연구개발 / R&D for Commercial Robor cleaner  
 > <p align="right"> 2017. 5. - 2021. 12</p>  
 > 
