@@ -4,15 +4,6 @@ title: "All Posts"
 permalink: /posts/
 ---
 
-# Author Information
-
-- **Name:** {{ site.author.name }}
-- **Bio:** {{ site.author.bio }}
-- **Location:** {{ site.author.location }}
-- **Email:** [{{ site.author.email }}](mailto:{{ site.author.email }})
-
----
-
 ## Blog Posts
 
 {% for post in site.posts %}
