@@ -2,6 +2,11 @@
 layout: single
 title: "About Me"
 permalink: /about/aboutme/
+style: |
+  body {
+    font-size: 12px; /* 본문 글자 크기 지정 */
+    line-height: 1.6; /* 줄 간격 설정 */
+  }
 ---
 
 
