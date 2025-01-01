@@ -1,4 +1,8 @@
-
+---
+layout: page
+title: "About Me"
+permalink: /about/aboutme/
+---
 
 # Interest
   Robotics, Mechatronics, Control, AI
@@ -35,7 +39,7 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 > <br>
 > 
 <div style="text-align:center">
-<img src="/LG_Q9.jpg" width="450px" height="300px" title="LGQ9" alt="LG Q9"></img>
+<img src="./LG_Q9.jpg" width="450px" height="300px" title="LGQ9" alt="LG Q9"></img>
 </div>
 <br>
 
@@ -53,7 +57,7 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 > <br>
 
 <div style="text-align:center">
-<img src="/LG_B9.png" width="450px" height="300px" title="LGB9" alt="LG B9"></img>
+<img src="./LG_B9.png" width="450px" height="300px" title="LGB9" alt="LG B9"></img>
 </div>
 <br>
 
@@ -68,7 +72,7 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 > - Developed a Cleaning performance measuring system.   
 > <br>
 <div style="text-align:center">
-<img src="/LG_M9.png" width="450px" height="300px" title="LGM9" alt="LG M9"></img>
+<img src="./LG_M9.png" width="450px" height="300px" title="LGM9" alt="LG M9"></img>
 </div>
 <hr>
 <br>
