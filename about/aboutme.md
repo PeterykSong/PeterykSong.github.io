@@ -25,6 +25,7 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 
 # Work Experiences
 <br> 
+
 ### ■ LG Electronics 
 현) 책임연구원 (Professional) /  HS사업본부 (HS Division)
 
