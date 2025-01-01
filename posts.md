@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: default
 title: "All Posts"
 permalink: /posts/
 ---
