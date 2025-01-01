@@ -24,11 +24,9 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 <br>
 
 # Work Experiences
-<br> 
-
+<br>
 ### ■ LG Electronics 
 현) 책임연구원 (Professional) /  HS사업본부 (HS Division)
-
 <p align="right"> 2010. 02.- Present </p>
 
 > #### 로봇플랫폼 선행연구 / Reserch for Q9 AI Agent robot
@@ -38,12 +36,8 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 > - System structure design  
 > - Hardware design<br>
 > <br>
-> 
-
-<img src="/about/LG_Q9.jpg" width="450px" title="LGQ9" alt="LG Q9"></img>
-
+<img src="/about/LG_Q9.jpg" width="450px" title="LGQ9" alt="LG Q9">
 <br>
-
 > #### 상업용 청소로봇 연구개발 / R&D for Commercial Robor cleaner  
 > <p align="right"> 2017. 5. - 2021. 12</p>  
 > 
@@ -58,12 +52,10 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 > <br>
 
 <p align="center">
-<img src="/about/LG_B9.png" width="450px" title="LGB9" alt="LG B9"></img>
+<img src="/about/LG_B9.png" width="450px" title="LGB9" alt="LG B9">
 </p>
 <br>
 
-
-> 
 > #### 가정용 습식 로봇청소기 선행연구 / Research on Wet Cleaning Robor  
 > <p align="right"> 2016.01 - 2017.02</p>  
 > 
@@ -73,7 +65,7 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 > - Developed a Cleaning performance measuring system.   
 > <br>
 <p align="center">
-<img src="/about/LG_M9.png" width="450px" title="LGM9" alt="LG M9"></img>
+<img src="/about/LG_M9.png" width="450px" title="LGM9" alt="LG M9">
 </p>
 <hr>
 <br>
