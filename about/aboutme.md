@@ -4,13 +4,10 @@ title: "About Me"
 permalink: /about/aboutme/
 ---
 
-# Research Interest
-  Robotics, Mechatronics, Control, AI
-<br>
-<br>
-<br>
 
-# About me
+
+
+
   2006년 기계공학부로 학사학위를 받고, 2008년 벽면이동로봇의 제어를 주제로 하여 석사학위를 수여받았습니다. 이후, LG전자에서 2010년부터 로봇제품의 제어 HW개발 담당자로서 업무를 담당하고 있습니다. 2025년부터 직장과 병행하여 성균관대학교 유현우 교수님 지도하에, Lair Lab 박사학위과정을 시작했습니다.<br>
 
 기계공학 , 전자회로, 제어이론, SW알고리즘까지 이르는 폭넓은 이해가 강점입니다. 이를 통해 보다 많은 것에 관심을 가지고 공부하며 이를 통해 현실적이고 실용적인 로봇 솔루션을 만들고 싶습니다. 
@@ -20,7 +17,10 @@ I earned my bachelor's degree in **Mechanical Engineering** in 2006 and complete
 I have a broad understanding that spans mechanical engineering, electronic circuits, control theory, and software algorithms. With these expertises, I want to explore and study diverse areas, and finally want to create **practical and innovative robotic solutions.**
 <hr>
 <br>
-<br>
+
+# Research Interest
+  Robotics, Mechatronics, Control, AI
+<hr>
 <br>
 
 # Work Experiences
@@ -40,7 +40,7 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 > <br>
 > 
 
-<img src="./LG_Q9.jpg" width="450px" title="LGQ9" alt="LG Q9"></img>
+<img src="/about/LG_Q9.jpg" width="450px" title="LGQ9" alt="LG Q9"></img>
 
 <br>
 
@@ -58,7 +58,7 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 > <br>
 
 <p align="center">
-<img src="./LG_B9.png" width="450px" title="LGB9" alt="LG B9"></img>
+<img src="/about/LG_B9.png" width="450px" title="LGB9" alt="LG B9"></img>
 </p>
 <br>
 
@@ -73,12 +73,11 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 > - Developed a Cleaning performance measuring system.   
 > <br>
 <p align="center">
-<img src="./LG_M9.png" width="450px" title="LGM9" alt="LG M9"></img>
+<img src="/about/LG_M9.png" width="450px" title="LGM9" alt="LG M9"></img>
 </p>
 <hr>
 <br>
-<br>
-<br> 
+
   
 
 
