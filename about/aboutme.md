@@ -38,9 +38,9 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 > - Hardware design<br>
 > <br>
 > 
-<div style="text-align:center">
-<img src="./LG_Q9.jpg" width="450px" height="300px" title="LGQ9" alt="LG Q9"></img>
-</div>
+<p align="center">
+<img src="./LG_Q9.jpg" width="450px" title="LGQ9" alt="LG Q9"></img>
+</p>
 <br>
 
 > #### 상업용 청소로봇 연구개발 / R&D for Commercial Robor cleaner  
@@ -56,9 +56,9 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 > - Standard / Certification  : Safety with Intertek / EMC Certification<br>
 > <br>
 
-<div style="text-align:center">
-<img src="./LG_B9.png" width="450px" height="300px" title="LGB9" alt="LG B9"></img>
-</div>
+<p align="center">
+<img src="./LG_B9.png" width="450px" title="LGB9" alt="LG B9"></img>
+</p>
 <br>
 
 
@@ -71,9 +71,9 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 > - Hardware design  
 > - Developed a Cleaning performance measuring system.   
 > <br>
-<div style="text-align:center">
-<img src="./LG_M9.png" width="450px" height="300px" title="LGM9" alt="LG M9"></img>
-</div>
+<p align="center">
+<img src="./LG_M9.png" width="450px" title="LGM9" alt="LG M9"></img>
+</p>
 <hr>
 <br>
 <br>
