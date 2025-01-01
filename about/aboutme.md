@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: default
 title: "About Me"
 permalink: /about/aboutme/
 ---
