@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "About Me"
 permalink: /about/aboutme/
 ---
@@ -39,9 +39,9 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 > - Hardware design<br>
 > <br>
 > 
-<p align="center">
+
 <img src="./LG_Q9.jpg" width="450px" title="LGQ9" alt="LG Q9"></img>
-</p>
+
 <br>
 
 > #### 상업용 청소로봇 연구개발 / R&D for Commercial Robor cleaner  
