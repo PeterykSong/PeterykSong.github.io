@@ -36,7 +36,7 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 
 # Work Experiences
 ## ■ LG Electronics 
-  * 책임연구원 (Professional) /  HS사업본부 (HS Division)   2010. 02.- Present
+  * 책임연구원 (Professional) / HS사업본부 (HS Division)   2010. 02.- Present
 
 #### 로봇플랫폼 선행연구 / Reserch for Q9 AI Agent robot <p align="right">2022. 2. ~ Present</p>  
 Two Legged-wheel robot platform for Home AI 
