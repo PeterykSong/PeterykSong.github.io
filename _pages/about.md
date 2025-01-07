@@ -39,10 +39,9 @@ I have a broad understanding that spans mechanical engineering, electronic circu
  - LG Electronics | HS사업본부 (HS Division) | 책임연구원 (Professional) | 2010.2-Present
 
 
-## Educations / Publications
-<br>
-- 2008.3 - 2010.2 | Master's Degree in Mechatronics Engineering at Sungkyunkwan University
-- 2002.3 - 2008.2 | Bachelor's Degree in Mechanical Engineering at Sungkyunkwan University
+##### Educations / Publications
+   - 2008.3 - 2010.2 | Master's Degree in Mechatronics Engineering at Sungkyunkwan University
+   - 2002.3 - 2008.2 | Bachelor's Degree in Mechanical Engineering at Sungkyunkwan University
 
 
 #####  벽면이동로봇의 설계 및 제어에 관한 연구 <br> Design and Control of Wall Climbing robot | 2008.03 - 2010.02
