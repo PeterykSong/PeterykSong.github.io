@@ -129,7 +129,7 @@ author:
     # - label: "LinkedIn"
     #   icon: "fab fa-fw fa-linkedin-in"
     #   url: "https://www.linkedin.com/in/wonseoko/"
-      - label: "Email"
+      - label: "peteryksong@gmail.com"
         icon: "fas fa-fw fa-envelope-square"
         url: "mailto:peteryksong@gmail.com"
 
@@ -143,7 +143,7 @@ footer:
     # - label: "GitHub"
     #   icon: "fab fa-fw fa-github"
     #   url: "https://github.com/wonseoko"
-      - label: "Email"
+      - label: "peteryksong@gmail.com"
         icon: "fas fa-fw fa-envelope-square"
         url: "mailto:peteryksong@gmail.com"
 
@@ -328,10 +328,8 @@ defaults:
       toc_sticky: true
       classes: wide
       header:
-      #   teaser: /assets/images/unsplash/rpi4-rZKdS0wI8Ks.jpg
-        overlay_image: https://source.unsplash.com/featured/?portfolio
-        overlay_filter: 0.4
-        caption: "Photo credit: [**Unsplash**](https://source.unsplash.com/featured/?portfolio)"
+      teaser: /assets/images/unsplash/rpi4-rZKdS0wI8Ks.jpg
+
 
 # Sass/SCSS
 sass:
