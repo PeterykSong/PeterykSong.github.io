@@ -114,7 +114,7 @@ analytics:
 # Site Author
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
-  avatar           : "/assets/images/bluetigero.jpg"
+  avatar           : "/assets/images/itsme.jpg"
   bio              : "어쩌다보니 로봇을 공부하게 되었고, 그렇게 싫어서 도망쳤는데 다시 로봇을 만들고 있습니다."
   location         : "Korea, South"
   links:
