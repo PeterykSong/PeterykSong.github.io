@@ -7,7 +7,6 @@ header:
 gallery:
   - url: /assets/images/portfolio/LG_Q9.jpg
     image_path: /assets/images/portfolio/LG_Q9.jpg
-    alt: "AFDEX"
 ---
 
 # AI Agent (2021.1 ~ 현재)
