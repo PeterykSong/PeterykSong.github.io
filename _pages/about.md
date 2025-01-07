@@ -5,7 +5,7 @@ title: "About"
 excerpt: 다시금 대학원에서 공부하면서 배웠던 내용들, 생각했던 내용들을 이 사이트를 통해 정리해나가고자 합니다.
 
 last_modified_at: 2025-1-7 20:32:00 +0900
-toc: false
+toc: true
 toc_sticky: true
 tags:
 
