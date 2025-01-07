@@ -1,7 +1,7 @@
 ---
-title: "Development"
+title: "Robotics"
 layout: category
-taxonomy: "dev"
+taxonomy: "Robotics"
 entries_layout: grid
 author_profile: true
 classes: wide
