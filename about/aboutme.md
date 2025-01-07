@@ -1,7 +1,17 @@
----
+<!-- ---
 title: "About Me"
 permalink: /about/aboutme/
 
+--- -->
+
+---
+title: "Wide Single Layout Page"
+classes: wide
+excerpt: "A page with `classes: wide` set to expand the main content's width."
+tags: 
+  - sample post
+  - readability
+  - test
 ---
 
 
@@ -26,17 +36,18 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 현) 책임연구원 (Professional) /  HS사업본부 (HS Division)
 <p align="right"> 2010. 02.- Present </p>
 
-> #### 로봇플랫폼 선행연구 / Reserch for Q9 AI Agent robot
-><p align="right">2022. 2. ~ Present</p>  
-> 
-> Two Legged-wheel robot platform for Home AI 
-> - System structure design  
-> - Hardware design<br>
-> <br>
+#### 로봇플랫폼 선행연구 / Reserch for Q9 AI Agent robot
+<p align="right">2022. 2. ~ Present</p>  
+Two Legged-wheel robot platform for Home AI 
+ - System structure design  
+ - Hardware design<br>
+<br>
 <p align="center">
 <img src="/about/LG_Q9.jpg" width="450px" title="LGQ9" alt="LG Q9">
 </p>
 <br>
+{: .notice--info}
+
 
 > #### 상업용 청소로봇 연구개발 / R&D for Commercial Robor cleaner  
 > <p align="right"> 2017. 5. - 2021. 12</p>  
