@@ -1,24 +1,11 @@
 ---
 permalink: /about/
 title: "About"
-# header:
-#   overlay_image: https://source.unsplash.com/random
-#   #overlay_image: https://source.unsplash.com/1600x900/?christmas
-#   overlay_filter: 0.4
-#   caption: "Photo credit: [**Unsplash Source Random**](https://source.unsplash.com)"
+
 excerpt: 다시금 대학원에서 공부하면서 배웠던 내용들, 생각했던 내용들을 이 사이트를 통해 정리해나가고자 합니다.
-# layouts_gallery:
-#   - url: /assets/images/mm-layout-splash.png
-#     image_path: /assets/images/mm-layout-splash.png
-#     alt: "splash layout example"
-#   - url: /assets/images/mm-layout-single-meta.png
-#     image_path: /assets/images/mm-layout-single-meta.png
-#     alt: "single layout with comments and related posts"
-#   - url: /assets/images/mm-layout-archive.png
-#     image_path: /assets/images/mm-layout-archive.png
-#     alt: "archive layout example"
+
 last_modified_at: 2025-1-7 20:32:00 +0900
-toc: true
+toc: false
 toc_sticky: true
 tags:
 
