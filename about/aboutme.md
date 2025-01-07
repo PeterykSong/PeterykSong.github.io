@@ -1,18 +1,8 @@
-<!-- ---
+---
 title: "About Me"
 permalink: /about/aboutme/
 
---- -->
-
----
-title: "Wide Single Layout Page"
-classes: wide
-excerpt: "A page with `classes: wide` set to expand the main content's width."
-tags: 
-  - sample post
-  - readability
-  - test
----
+--- 
 
 
   2006년 기계공학부로 학사학위를 받고, 2008년 벽면이동로봇의 제어를 주제로 하여 석사학위를 수여받았습니다. 이후, LG전자에서 2010년부터 로봇제품의 제어 HW개발 담당자로서 업무를 담당하고 있습니다. 2025년부터 직장과 병행하여 성균관대학교 유현우 교수님 지도하에, Lair Lab 박사학위과정을 시작했습니다.<br>
