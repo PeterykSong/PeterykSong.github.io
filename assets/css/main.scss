@@ -48,15 +48,15 @@ html {
   font-size: 14px;                    // Default 16px;
 
   @include breakpoint($medium) {
-    font-size: 12px;                  // Default 18px;
+    font-size: 14px;                  // Default 18px;
   }
 
   @include breakpoint($large) {
-    font-size: 14px;                  // Default 20px;
+    font-size: 16px;                  // Default 20px;
   }
 
   @include breakpoint($x-large) {
-    font-size: 16px;                  // Default 22px;
+    font-size: 18px;                  // Default 22px;
   }
 
 }
@@ -70,7 +70,7 @@ html {
 // 원본위치: [remote-theme]/_sass/minimal-mistakes/_basee.scss
 //
 a {
-  color: MediumPurple;
+  color: Navy;
   text-decoration: none;                // 추가된 코드입니다.
 
   &:focus {
@@ -78,7 +78,7 @@ a {
   }
 
   &:visited {
-    color: MediumPurple;
+    color: Navy;
   }
 
   &:hover {
@@ -86,7 +86,7 @@ a {
     //text-decoration: underline;
   }
   &:active {
-    color: MediumPurple; /* 클릭 시 색상 */
+    color: Navy; /* 클릭 시 색상 */
   }
 }
 
