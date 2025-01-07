@@ -7,7 +7,7 @@
 
 remote_theme             : "mmistakes/minimal-mistakes@master"
 
-minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
@@ -261,9 +261,15 @@ defaults:
       type: portfolio
     values:
       layout: single
-      author_profile: false
+      author_profile: true
+      read_time: true
+      show_date: false
+      comments: true
       share: true
-
+      related: true
+      toc: false
+      toc_sticky: true
+      classes: wide
 
 # Sass/SCSS
 sass:
