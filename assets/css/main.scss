@@ -45,7 +45,7 @@ $max-width: 1600px;       // default $x-large
 // 원본위치: [remote-theme]/_sass/minimal-mistakes/_reset.scss
 //
 html {
-  font-size: 16px;                    // Default 16px;
+  font-size: 12px;                    // Default 16px;
 
   @include breakpoint($medium) {
     font-size: 18px;                  // Default 18px;
@@ -70,6 +70,7 @@ html {
 // 원본위치: [remote-theme]/_sass/minimal-mistakes/_basee.scss
 //
 a {
+  color:#000
   text-decoration: none;                // 추가된 코드입니다.
 
   &:focus {
@@ -77,7 +78,7 @@ a {
   }
 
   &:visited {
-    color: $link-color-visited;
+    color: $inherit;
   }
 
   &:hover {
