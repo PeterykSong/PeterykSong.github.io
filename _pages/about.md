@@ -21,14 +21,13 @@ toc: true
 ---
 
 
-2006년 기계공학부로 학사학위를 받고, 2008년 벽면이동로봇의 제어를 주제로 하여 석사학위를 수여받았습니다. 이후, LG전자에서 2010년부터 로봇제품의 제어 HW개발 담당자로서 업무를 담당하고 있습니다. 2025년부터 직장과 병행하여 성균관대학교 유현우 교수님 지도하에, Lair Lab 박사학위과정을 시작했습니다.<br>
+2006년 기계공학부로 학사학위를 받고, 2008년 벽면이동로봇의 제어를 주제로 하여 석사학위를 수여받았습니다. 이후, LG전자에서 2010년부터 로봇제품의 제어 HW개발 담당자로서 업무를 담당하고 있습니다. 2025년부터 직장과 병행하여 성균관대학교 유현우 교수님 지도하에, Lair Lab 박사학위과정을 시작했습니다.
 
 기계공학 , 전자회로, 제어이론, SW알고리즘까지 이르는 폭넓은 이해가 강점입니다. 이를 통해 보다 많은 것에 관심을 가지고 공부하며 이를 통해 현실적이고 실용적인 로봇 솔루션을 만들고 싶습니다. 
-<br><br>
+<br>
 I earned my bachelor's degree in **Mechanical Engineering** in 2006 and completed my **master's degree in 2008** with a thesis on the control of wall-climbing robots. Since 2010, I have been working at **LG Electronics** as a **control hardware developer for robotic products**. Starting in 2025, I began **pursuing a Ph.D.** at **Lair** Lab under the guidance of Professor **Hyunwoo Yoo** at Sungkyunkwan University.
 
 I have a broad understanding that spans mechanical engineering, electronic circuits, control theory, and software algorithms. With these expertises, I want to explore and study diverse areas, and finally want to create **practical and innovative robotic solutions.**
-{: .notice--info}
 
 # Research Interest
   Robotics, Mechatronics, Control, AI
@@ -36,22 +35,16 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 <br>
 
 # Work Experiences
-<br>
-### ■ LG Electronics 
-현) 책임연구원 (Professional) /  HS사업본부 (HS Division)
-<p align="right"> 2010. 02.- Present </p>
+## ■ LG Electronics 
+  * 책임연구원 (Professional) /  HS사업본부 (HS Division)   2010. 02.- Present
 
-#### 로봇플랫폼 선행연구 / Reserch for Q9 AI Agent robot
-<p align="right">2022. 2. ~ Present</p>  
+#### 로봇플랫폼 선행연구 / Reserch for Q9 AI Agent robot <p align="right">2022. 2. ~ Present</p>  
 Two Legged-wheel robot platform for Home AI 
  - System structure design  
  - Hardware design<br>
-<br>
 <p align="center">
 <img src="/about/LG_Q9.jpg" width="450px" title="LGQ9" alt="LG Q9">
 </p>
-<br>
-{: .notice--info}
 
 
 > #### 상업용 청소로봇 연구개발 / R&D for Commercial Robor cleaner  
