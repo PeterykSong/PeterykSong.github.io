@@ -234,7 +234,7 @@ a {
     color: mix(#000, $notice-color, 10%);
 
     &:hover {
-      color: mix(#000000, $notice-color, 50%);
+      color: mix(#000, $notice-color, 50%);
     }
   }
 
