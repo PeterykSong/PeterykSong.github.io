@@ -70,7 +70,7 @@ html {
 // 원본위치: [remote-theme]/_sass/minimal-mistakes/_basee.scss
 //
 a {
-  color: black;
+  color: MediumPurple;
   text-decoration: none;                // 추가된 코드입니다.
 
   &:focus {
@@ -78,15 +78,15 @@ a {
   }
 
   &:visited {
-    color: black;
+    color: MediumPurple;
   }
 
   &:hover {
-    color: black;
+    color: red;
     //text-decoration: underline;
   }
   &:active {
-    color: black; /* 클릭 시 색상 */
+    color: MediumPurple; /* 클릭 시 색상 */
   }
 }
 
