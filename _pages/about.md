@@ -30,6 +30,16 @@ I earned my bachelor's degree in **Mechanical Engineering** in 2006 and complete
 I have a broad understanding that spans mechanical engineering, electronic circuits, control theory, and software algorithms. With these expertises, I want to explore and study diverse areas, and finally want to create **practical and innovative robotic solutions.**
 
 
+## Research Interest
+  Robotics, Mechatronics, Control, AI
+
+## Work Experiences
+ * LG Electronics / HS사업본부 (HS Division) / 책임연구원 (Professional) / 2010.2-Present
+
+## Educations / Publications  
+* 2008. 3 - 2010. 2. | Master's Degree in Mechatronics Engineering at Sungkyunkwan University
+* 2002. 3 - 2008. 2. | Bachelor's Degree in Mechanical Engineering at Sungkyunkwan University
+
 <!-- 
 ## 주요 사용 기술
 과거에 주로 [MFC](https://docs.microsoft.com/cpp/mfc)를 기반으로 하는 윈도우용 [CAE](https://en.wikipedia.org/wiki/Computer-aided_engineering) 프로그램을 개발해 오다가, 트렌드에 어울리는 [GUI](https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%9E%98%ED%94%BD_%EC%82%AC%EC%9A%A9%EC%9E%90_%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4)를 위해 Codejock사의 [XTP](https://codejock.com/products/toolkitpro/)를 오랜기간 사용해 왔으며, 이 후 맥과 리눅스 지원을 위해 [Qt](https://www.qt.io/)를 도입하여 멀티 플랫폼을 지원하는 프로그램을 주로 개발해 왔습니다.
