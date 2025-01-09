@@ -38,8 +38,10 @@ layout: archive
     {% elsif post.header.image %}      
       {% capture image %}{{ post.header.image }}{% endcapture %}
     {% else %}
-      {% comment %}
-      {% unless color %}
+    {% assign color = "rgb(192, 192, 192)" %}
+    {% comment %}
+    {% unless color %}
+
         {% assign min = 96 %}
         {% assign max = 160 %}
         {% assign diff = max | minus: min %}
@@ -47,9 +49,10 @@ layout: archive
         {% assign g = "now" | date: "%N" | modulo: diff | plus: min %}
         {% assign b = "now" | date: "%N" | modulo: diff | plus: min %}
         {% capture color %}rgb({{ r }},{{ g }},{{ b }}){% endcapture %}
-      {% endcomment %} 
-      {% assign color = "rgb(192, 192, 192)" %}
-      {% endunless %}      
+ 
+
+      {% endunless %}
+      {% endcomment %}       
     {% endif %}
 
     {% include excerpt_hero.html 
