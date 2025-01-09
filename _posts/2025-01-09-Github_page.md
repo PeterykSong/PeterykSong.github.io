@@ -38,7 +38,7 @@ Git은 누가봐도 SW 개발자의 영역이었고, 내가 아직 그 범주에
 
  결국 다시 구글링을 열심히 하다보니, 한줄기 빛과 같은 페이지를 찾을 수 있었다. 
 
-* [오원석님 개인 패이지지](https://www.wonseoko.com/jekyll/minimal-mistakes/)
+* [오원석님 개인 페이지](https://www.wonseoko.com/jekyll/minimal-mistakes/)
 
  <img src="/assets/images/2025-01-09_owonseok.png" alt="">
 
