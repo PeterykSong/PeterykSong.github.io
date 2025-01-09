@@ -204,7 +204,6 @@ li ol {
   }
 
   .archive__item-teaser {
-    background-color: #f9f9f9bd;
     @include breakpoint($small) {
       max-height: 200px;
     }
