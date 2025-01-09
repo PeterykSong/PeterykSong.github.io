@@ -6,6 +6,10 @@ excerpt: "첫번째 포스트, Github Blog를 시작하면서"
 last_modified_at: 2025-1-7 20:32:00 +0900
 toc: false
 
+header:
+  teaser: /assets/images/portfolio/LG_Q9.jpg
+
+
 tags:
   - Github
   - jekyll
