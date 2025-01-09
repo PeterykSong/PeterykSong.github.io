@@ -234,7 +234,7 @@ tags:
  home_hero.html에서 Posts 파일들을 리스트로 만들면서, exerpt_hero.html를 불러들여 리스트를 완성하는데, 그때 색깔을 넘기면서 rgb( ,,) 가 아니라 rgba(,,,)로 넘겨야 했던 것이다. 
 
 
- ```yml
+ ```
 
      {% if post.header.overlay_image %}      
       {% capture image %}{{ post.header.overlay_image }}{% endcapture %}
@@ -251,7 +251,7 @@ tags:
 
 assign color 부분의 원래 코드는 이부분이다. 날짜에 따라 랜덤으로 색깔정하는 코드이니, 과감하게 날렸다. 
 
-```yml 
+``` 
       {% unless color %}
         {% assign min = 96 %}
         {% assign max = 160 %}
