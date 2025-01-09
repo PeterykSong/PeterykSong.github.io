@@ -38,10 +38,10 @@ layout: archive
     {% elsif post.header.image %}      
       {% capture image %}{{ post.header.image }}{% endcapture %}
     {% else %}
-    {% assign color = "rgb(250, 250, 250)" %}
-    {% comment %}
-    {% unless color %}
-
+      {% assign color = "rgb(250, 250, 250)" %}
+      {% assign filter = 0.0 %}
+      {% comment %}
+      {% unless color %}
         {% assign min = 96 %}
         {% assign max = 160 %}
         {% assign diff = max | minus: min %}
@@ -49,8 +49,6 @@ layout: archive
         {% assign g = "now" | date: "%N" | modulo: diff | plus: min %}
         {% assign b = "now" | date: "%N" | modulo: diff | plus: min %}
         {% capture color %}rgb({{ r }},{{ g }},{{ b }}){% endcapture %}
- 
-
       {% endunless %}
       {% endcomment %}       
     {% endif %}
