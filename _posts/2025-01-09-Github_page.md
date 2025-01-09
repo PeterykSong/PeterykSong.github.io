@@ -9,7 +9,7 @@ toc: false
 header:
   teaser: /assets/images/2025-01-09_post.jpg
   overlay_image: /assets/images/2025-01-09_post.png
-  overlay_filter: 0.1
+  overlay_filter: 0.6 #숫자가 높을수록 어둡다.
 
 tags:
   - Github
