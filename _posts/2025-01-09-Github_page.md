@@ -40,7 +40,7 @@ Git은 누가봐도 SW 개발자의 영역이었고, 내가 아직 그 범주에
 
 * [오원석님 개인 패이지지](https://www.wonseoko.com/jekyll/minimal-mistakes/)
 
- <img src="/assets/images/2025-01-09-owonseok.png" alt="">
+ <img src="/assets/images/2025-01-09_owonseok.png" alt="">
 
 블로그에 나와있는대로 천천히 내려가다보니, Minimal-Mistakes 의 샘플페이지인 /docs 를 참조했다는 내용을 읽고, 시킨 그대로 따라하기 시작했다. 그게 두번쨰 베끼기다. 
 
