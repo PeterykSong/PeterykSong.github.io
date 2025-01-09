@@ -7,9 +7,11 @@ last_modified_at: 2025-1-7 20:32:00 +0900
 toc: false
 
 header:
-  teaser: /assets/images/portfolio/LG_Q9.jpg
-
-
+  teaser: /assets/images/unsplash/github-842ofHC6MaI.jpg
+  overlay_image: /assets/images/unsplash/github-842ofHC6MaI.jpg
+  overlay_filter: 0.5
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com/photos/842ofHC6MaI)"
+  
 tags:
   - Github
   - jekyll
