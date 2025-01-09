@@ -39,6 +39,7 @@ layout: archive
       {% capture image %}{{ post.header.image }}{% endcapture %}
     {% else %}
       {% unless color %}
+      {% comment %}
         {% assign min = 96 %}
         {% assign max = 160 %}
         {% assign diff = max | minus: min %}
@@ -46,6 +47,8 @@ layout: archive
         {% assign g = "now" | date: "%N" | modulo: diff | plus: min %}
         {% assign b = "now" | date: "%N" | modulo: diff | plus: min %}
         {% capture color %}rgb({{ r }},{{ g }},{{ b }}){% endcapture %}
+      {% endcomment %}
+      {% assign color = "rgb(128, 128, 128)" %}
       {% endunless %}      
     {% endif %}
 
