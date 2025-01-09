@@ -7,11 +7,10 @@ last_modified_at: 2025-1-7 20:32:00 +0900
 toc: false
 
 header:
-  teaser: /assets/images/unsplash/github-842ofHC6MaI.jpg
-  overlay_image: /assets/images/unsplash/github-842ofHC6MaI.jpg
+  teaser: /assets/images/unsplash/2025-01-09_post.jpg
+  overlay_image: /assets/images/unsplash/2025-01-09_post.png
   overlay_filter: 0.5
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com/photos/842ofHC6MaI)"
-  
+
 tags:
   - Github
   - jekyll
@@ -197,3 +196,29 @@ atom_feed:
 
  내가 프론트엔드 개발자가 되고자 하는 것도 아니니..... 
  머리가 명석하지 않다면, 베끼는 것이라도 충실히 잘하자. 모방하다보면 뭔가 눈의 틔이겠지.
+
+ * 포스팅 이후 수정 (2025-01-09)
+ 
+ 헤더 이미지를 넣지 않으니, 첫페이지에서 너무 검은 화면이 나와 조금 난감했다.   
+ 덕분에 하이퍼링크의 Navy 색이 검은색에 뭍혀 도통 보이지가 않았다. 헤더이미지가 없는 경우 밝은 회색으로 하고 싶은데, main.scss에 있을것같지만 아직 찾고 있는 중이다. 급한대로, 이 포스트코드의 첫부분에 넣는 yml에 헤더이미지를 추가해보자. 
+
+ ```yml
+ ---
+title: "Github Page를 시작하면서"
+
+excerpt: "첫번째 포스트, Github Blog를 시작하면서"
+
+last_modified_at: 2025-1-9 20:32:00 +0900
+toc: false
+
+header:
+  teaser: /assets/images/unsplash/2025-01-09_post.png
+  overlay_image: /assets/images/unsplash/2025-01-09_post.png
+  overlay_filter: 0.5
+
+tags:
+  - Github
+  - jekyll
+  - Blog
+---
+```
