@@ -104,6 +104,14 @@ li ol {
 
 
 
+.archive__item-title {
+  a {
+    color: white;
+    text-decoration: none;   
+  }
+}
+
+
 //
 // Grid Item 숫자를 4에서 3으로 조정
 //
@@ -113,7 +121,6 @@ li ol {
 //
 // 원본위치: [remote-theme]/_sass/minimal-mistakes/_archive.scss
 //
-
 .grid__item {
   margin-bottom: 2em;
 
@@ -197,7 +204,7 @@ li ol {
   }
 
   .archive__item-teaser {
-    background-color: #C0C0C0;
+    background-color: #f9f9f9bd;
     @include breakpoint($small) {
       max-height: 200px;
     }
