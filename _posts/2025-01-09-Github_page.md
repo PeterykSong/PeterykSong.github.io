@@ -9,7 +9,7 @@ toc: false
 header:
   teaser: /assets/images/2025-01-09_post.jpg
   overlay_image: /assets/images/2025-01-09_post.png
-  overlay_filter: 0.5
+  overlay_filter: 0.1
 
 tags:
   - Github
