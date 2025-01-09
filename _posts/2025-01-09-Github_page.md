@@ -7,8 +7,8 @@ last_modified_at: 2025-1-7 20:32:00 +0900
 toc: false
 
 header:
-  teaser: /assets/images/unsplash/2025-01-09_post.jpg
-  overlay_image: /assets/images/unsplash/2025-01-09_post.png
+  teaser: /assets/images/2025-01-09_post.jpg
+  overlay_image: /assets/images/2025-01-09_post.png
   overlay_filter: 0.5
 
 tags:
@@ -212,8 +212,8 @@ last_modified_at: 2025-1-9 20:32:00 +0900
 toc: false
 
 header:
-  teaser: /assets/images/unsplash/2025-01-09_post.png
-  overlay_image: /assets/images/unsplash/2025-01-09_post.png
+  teaser: /assets/images/2025-01-09_post.png
+  overlay_image: /assets/images/2025-01-09_post.png
   overlay_filter: 0.5
 
 tags:
