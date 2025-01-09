@@ -238,6 +238,7 @@ tags:
 
 
  ```liquid
+ {% raw %}
      {% if post.header.overlay_image %}      
       {% capture image %}{{ post.header.overlay_image }}{% endcapture %}
     {% elsif post.header.image %}      
@@ -246,6 +247,7 @@ tags:
       {% assign color = "rgba(250, 250, 250,0.8)" %}
       {% assign filter = 0.1 %}
     {% endif %}
+  {% endraw %}
 ```
 
 
@@ -256,7 +258,7 @@ assign color 부분의 원래 코드는 이부분이다. 날짜에 따라 랜덤
 
 
 ```liquid
-
+     {% raw %}
       {% unless color %}
         {% assign min = 96 %}
         {% assign max = 160 %}
@@ -266,4 +268,7 @@ assign color 부분의 원래 코드는 이부분이다. 날짜에 따라 랜덤
         {% assign b = "now" | date: "%N" | modulo: diff | plus: min %}
         {% capture color %}rgb({{ r }},{{ g }},{{ b }}){% endcapture %}
       {% endunless %}
+    {% endraw %}
 ```
+
+코드의  "{% raw %}" / "{% endraw %}"는 삭제할 것. 
