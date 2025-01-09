@@ -6,7 +6,7 @@ excerpt: "첫번째 포스트, Github Blog를 시작하면서"
 last_modified_at: 2025-1-9 20:32:00 +0900
 toc: false
 
-overlay_color: "rgb(128, 128, 128)" # 회색
+header:
   #teaser: /assets/images/2025-01-09_post.jpg #첫페이지에서 요약으로 보이는 페이지.
   #overlay_image: /assets/images/2025-01-09_post.png #포스트 페이지에서 보이는 이미지
   #overlay_filter: 0.6 #숫자가 높을수록 어둡다.
