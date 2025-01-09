@@ -203,14 +203,15 @@ li ol {
       max-height: 200px;
     }
   }
+  
+  .archive__item {
+    background-color: #f9f9f9bd; /* 연한 회색 */
+    //border-radius: 8px;       /* 모서리를 둥글게 (선택 사항) */
+    //padding: 15px;            /* 내부 여백 */
+    //margin-bottom: 20px;      /* 카드 간 간격 */
+  }
 }
 
-.archive__item {
-  background-color: #f9f9f9bd; /* 연한 회색 */
-  //border-radius: 8px;       /* 모서리를 둥글게 (선택 사항) */
-  //padding: 15px;            /* 내부 여백 */
-  //margin-bottom: 20px;      /* 카드 간 간격 */
-}
 
 
 //
@@ -341,6 +342,13 @@ li ol {
     position: relative;
   }
 }
+.archive__item {
+  background-color: #f9f9f9bd; /* 연한 회색 */
+  //border-radius: 8px;       /* 모서리를 둥글게 (선택 사항) */
+  //padding: 15px;            /* 내부 여백 */
+  //margin-bottom: 20px;      /* 카드 간 간격 */
+}
+
 
 //
 // categories, tags, years 에서 사용하는 taxonomy index 글자 크기 조정
