@@ -24,6 +24,8 @@ main:
   #   url: /docs/quick-start-guide/
   - title: "About"
     url: /about/
+  - title: "Robotics"
+    url: /Robotics/
   - title: "Posts"
     url: /year-archive/
   - title: "Portfolio"
