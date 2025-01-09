@@ -1,62 +1,193 @@
 ---
 title: "Github Page를 시작하면서"
+
+excerpt: "첫번째 포스트, Github Blog를 시작하면서"
+
+last_modified_at: 2025-1-7 20:32:00 +0900
+toc: false
+
 tags:
   - Github
   - jekyll
   - Blog
 ---
 
-Nested and mixed lists are an interesting beast. It's a corner case to make sure that
+> 베끼는 것이라도 잘 하자. 
 
-* Lists within lists do not break the ordered list numbering order
-* Your list styles go deep enough.
+ Git을 할 일이 있을까. 나에겐 먼 일이라 생각했다. 그도 그럴것이 보통 HW 설계업무를 한다거나, 기구설계부분을 들여다보는 것이 대부분인데, 
+Git은 누가봐도 SW 개발자의 영역이었고, 내가 아직 그 범주에 들어갔다고 생각해본 적은 없었기 때문이다. 심지어 신변잡기, 여행, 취미등의 
+내용은 네이버 블로그도 잘 되어있었기에 굳이 Git Page를 만들면서까지 프론트엔드의 일을 할 이유는 없었다.  
 
-### Ordered -- Unordered -- Ordered
+ 그러던 내가, 2025년 대학원에 새로이 입학하면서 Cover Letter 를 쓸 일이 생겼다. 그렇다. 주전공을 바꾸어야 하는 시점이 된 것이다.
 
-1. ordered item
-2. ordered item 
-   * **unordered**
-   * **unordered** 
-     1. ordered item
-     2. ordered item
-3. ordered item
-4. ordered item
+<img src="/assets/images/2025-01-09_notion.jpg" alt="">
 
-### Ordered -- Unordered -- Unordered
+ 처음엔 대학원 입학준비를 하며, 간간히 써오던 Notion을 이용할까 생각했었다. 회사에서 접속이 불가능한 Notion을 쓰기엔 내 환경이 여의치 않았다. 그래서 눈에 들어온 Platform이 Github 블로그였다. 공부한 자료도 관리할 필요가 있었고, 수식의 편집이나, 코드의 업로드가 편한 것을 선택하는 것이 장기적으로 좋을 것이라는 생각이었다. 
 
-1. ordered item
-2. ordered item 
-   * **unordered**
-   * **unordered** 
-     * unordered item
-     * unordered item
-3. ordered item
-4. ordered item
+<img src="/assets/images/2025-01-09-git.png" alt="">
 
-### Unordered -- Ordered -- Unordered
+ 많은 인터넷 검색을 통해, Jekyll이라는 포맷이 있음을 확인했다. 적당하게 쓸만했고, 이후 포트폴리오의 정리나, 공부한 내용들을 아카이빙하기엔 적절할 것이란 생각에 좀더 검색하다, \"Hamilton\" 이라는 테마를 제일 먼저 설치했고, 예제를 찾아보니 아차 실수했음을 알게되었다. 그래서 결국 모두가 많이 쓰는 Minimal-Mistakes 로 갈아타기를 결심했다. 그렇게 첫번째 베껴쓰기가 시작되었다. 
 
-* unordered item
-* unordered item 
-  1. ordered
-  2. ordered 
-     * unordered item
-     * unordered item
-* unordered item
-* unordered item
+ <img src="/assets/images/2025-01-09-hamilton.png" alt="">
 
-### Unordered -- Unordered -- Ordered
+ *  [Minimal-Mistakes](https://mmistakes.github.io/minimal-mistakes/)
 
-* unordered item
-* unordered item 
-  * unordered
-  * unordered 
-    1. **ordered item**
-    2. **ordered item**
-* unordered item
-* unordered item
+ <img src="/assets/images/2025-01-09-minimal-mistakes.png" alt="">
 
-### Task Lists
+ 막상 Quick Start Guide 대로 해 보아도 신통치가 않았다. 난생처음해보는 프론트엔드 작업에(사실 예전엔 HTML 수준의 웹페이지만 만져봤었던게 전부였다.), Ruby라는 생소한 코드를 만나서, HTML과 Markdown문법을 혼합해서 쓰려 하니 내 수준에 감당이 되질 않았다. 
 
-- [x] Finish my changes
-- [ ] Push my commits to GitHub
-- [ ] Open a pull request
+ 결국 다시 구글링을 열심히 하다보니, 한줄기 빛과 같은 페이지를 찾을 수 있었다. 
+
+* [오원석님 개인 패이지지](https://www.wonseoko.com/jekyll/minimal-mistakes/)
+
+ <img src="/assets/images/2025-01-09-owonseok.png" alt="">
+
+블로그에 나와있는대로 천천히 내려가다보니, Minimal-Mistakes 의 샘플페이지인 /docs 를 참조했다는 내용을 읽고, 시킨 그대로 따라하기 시작했다. 그게 두번쨰 베끼기다. 
+
+ <img src="/assets/images/2025-01-09-mm_docs.png" alt="">
+
+그래도 모양이 이상하다. 계속 수정과 deploy를 반복하기를 일주일을 보내다가, 도저히 안되겠다 싶어 오원석님 블로그를 통째로 복사하는 것에서 시작했다. 그렇다. 그것이 세번째 복사다. 
+
+제일 먼저 손댄 것은 /_data/navigation.yml이었다. 불필요한 메뉴들을 지우고, 내가 올리고 싶은 것들만 남기기로 했다. Post와 Portfolio는 오원석님께서 사용하신 방식을 그대로 남기기로 했다. 
+
+```yml
+# main links
+main:
+  # - title: "Quick-Start Guide"
+  #   url: /docs/quick-start-guide/
+  - title: "About"
+    url: /about/
+  - title: "Robotics"
+    url: /Robotics/
+  - title: "Posts"
+    url: /year-archive/
+  - title: "Portfolio"
+    url: /portfolio/
+```
+
+그다음 손 본것은 오원석님의 페이지에서 설명한데로, main.css파일을 만드는 것. 
+/assets/css 폴더를 만들고, 그 안에 main.scss 파일을 우선 하나도 바뀜없이 Copy & Paste로 박아 넣었다. 
+
+```
+📦 roots
+└─ assests
+   └─ css
+      └─ main.css
+```
+<!-- ©generated by [Project Tree Generator](https://woochanleee.github.io/project-tree-generator) -->
+
+그 다음, 글자 크기를 내 입맛에 맞게 바꾸고, 
+하이퍼 링크의 색깔을 내가 좋아하는 색감에 맞췄다. 
+
+```yml
+
+html {
+  font-size: 14px;                    // Default 16px;
+
+  @include breakpoint($medium) {
+    font-size: 14px;                  // Default 18px;
+  }
+
+  @include breakpoint($large) {
+    font-size: 16px;                  // Default 20px;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 18px;                  // Default 22px;
+  }
+
+}
+```
+
+```yml
+a {
+  color: Navy;
+  text-decoration: none;                // 추가된 코드입니다.
+
+  &:focus {
+    @extend %tab-focus;
+  }
+
+  &:visited {
+    color: Navy;
+  }
+
+  &:hover {
+    color: red;
+    //text-decoration: underline;
+  }
+  &:active {
+    color: Navy; /* 클릭 시 색상 */
+  }
+}
+```
+
+그리고 Jekyll 테마가 돌아갈 수 있도록 root/_config.yml을 손대기 시작했다. 
+(순서는 중요치 않다. 뭔가 안되면 이걸 먼저 해도 좋더라. 뭔가 일이 진행되는것처럼 보이기 때문에..... )
+
+```yml
+
+minimal_mistakes_skin    : "contrast" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Site Settings
+locale                   : "ko-KR"
+title                    : "Note for note"
+title_separator          : "-"
+subtitle                 : "Sing a Song. Portfolio and Archive of PeterykSong" #Portfolio and Archive for Robotics
+name                     : &name "송영국" # &name is a YAML anchor which can be *referenced later
+description              : &description "이 웹사이트는 Github Pages와 Minimal-Mistakes Jekyll 테마 및 오원석님(www.wonseoko.com) 디자인을 사용해 만들어졌습니다."
+url                      : https://PeterykSong.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/" # the subpath of your site, e.g. "/blog"
+repository               : "PeterykSong/PeterykSong.github.io"
+```
+
+제일 먼저 실수했던건  
+url과 repository의 문자가 대소문자를 가린다는 것.(Git 생초보이니 이해를 부탁합니다.) url은 아닐지도 모르겠다. 실험하기 귀찮아서 하진 않았지만, 마음의 안정을 위해, 둘 다 대소문자는 맞춰줬다.
+
+왼쪽에 붙는 작은 소개말도 업데이트하고, 이메일 주소도 붙여 넣는다. SNS는 공개하고싶지 않아 지워버렸다. 
+
+```yml
+# Site Author
+author:
+  name             : *name # *name is a YAML reference pointing to the &anchor earlier
+  avatar           : "/assets/images/itsme.jpg"
+  bio              : "어쩌다보니 로봇을 공부하게 되었고, 그렇게 싫어서 도망쳤는데 다시 로봇을 만들고 있습니다."
+  location         : "Korea, South"
+```
+```yml
+# Site Footer
+footer:
+  links:
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: ""
+    # - label: "GitHub"
+    #   icon: "fab fa-fw fa-github"
+    #   url: ""
+      - label: "peteryksong@gmail.com"
+        icon: "fas fa-fw fa-envelope-square"
+        url: "mailto:peteryksong@gmail.com"
+```
+
+하단부에 아무 의미없이 안쓰는 FEED 아이콘을 날리기 위해, 아래처럼 수정했다. 
+```yml
+atom_feed:
+  path                   : # blank (default) uses feed.xml
+  hide: true    #이 줄을 추가하면 FEED 링크가 사라진다.
+```
+
+
+ <img src="/assets/images/2025-01-09-feed.png" alt="">
+
+ 얼추 셋팅을 마치고, 가볍게 포트폴리오 한페이지를 올리고, Cover Letter를 작성해서 넣어본다. Cover Letter에 회사에서 했던 모든 프로젝트를 올리는건 지금은 일단 과감히 생략하련다. 
+
+ 다소 아쉬운건 Word 양식으로 썼던 이력서처럼 왼쪽엔 프로젝트 이름을, 오른쪽에는 기간을 한줄에 정렬해 넣는건 아직 방법을 모르겠다. 일단 지금은 마감이 중요하니 안되는건 포기하자. 
+
+페이지 Header에 넣는 이미지도 포기했다. 대신 나는 본문에 사진을 충실히 올려보고자 한다. Post에 어떻게 나올지에 따라 Head이미지를 넣을수도 있겠다. 
+
+ 정말, 긴 긴 삽질의 연속이었다. 처음 해보는 Fork, 아차 싶어서 다시 강좌보고 따라하기 위해 지우고 다시 올리기를 두번, 결국 안되겠다 싶어 과감하게 복제에 가까운 따라하기를 시행하고 나서야 나만의 페이지가 만들어진다. 
+
+ 
+
+ 내가 프론트엔드 개발자가 되고자 하는 것도 아니니..... 
+ 머리가 명석하지 않다면, 베끼는 것이라도 충실히 잘하자. 모방하다보면 뭔가 눈의 틔이겠지.
