@@ -224,3 +224,41 @@ tags:
   - Blog
 ---
 ```
+
+
+
+ * 포스팅 이후 수정 (2025-01-09 22:45)
+ 드디어 첫페이지 포스트카드의 색깔을 재정의했다. 
+
+ main.scss 에서 설정하는 건줄 알았는데, home_hero.html 에서 설정하는 것이었다.
+ home_hero.html에서 Posts 파일들을 리스트로 만들면서, exerpt_hero.html를 불러들여 리스트를 완성하는데, 그때 색깔을 넘기면서 rgb( ,,) 가 아니라 rgba(,,,)로 넘겨야 했던 것이다. 
+
+
+ ```yml
+
+     {% if post.header.overlay_image %}      
+      {% capture image %}{{ post.header.overlay_image }}{% endcapture %}
+    {% elsif post.header.image %}      
+      {% capture image %}{{ post.header.image }}{% endcapture %}
+    {% else %}
+      {% assign color = "rgba(250, 250, 250,0.8)" %}
+      {% assign filter = 0.1 %}
+    {% endif %}
+
+  ```
+포스트 파일에 헤더이미지가 없다면, color를 rgba 로 지정하고, filter는 0.1로 지정하는데, 이때 filter는 그라디에이션 필터였다. 
+즉, 그라디에이션 색깔과 백그라운드 색깔이 꼬이면서 발생하는 문제이니, 둘다 강제 지정하는 것이 좋다. 
+
+assign color 부분의 원래 코드는 이부분이다. 날짜에 따라 랜덤으로 색깔정하는 코드이니, 과감하게 날렸다. 
+
+```yml 
+      {% unless color %}
+        {% assign min = 96 %}
+        {% assign max = 160 %}
+        {% assign diff = max | minus: min %}
+        {% assign r = "now" | date: "%N" | modulo: diff | plus: min %}
+        {% assign g = "now" | date: "%N" | modulo: diff | plus: min %}
+        {% assign b = "now" | date: "%N" | modulo: diff | plus: min %}
+        {% capture color %}rgb({{ r }},{{ g }},{{ b }}){% endcapture %}
+      {% endunless %}
+```
