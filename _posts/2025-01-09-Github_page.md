@@ -7,8 +7,8 @@ last_modified_at: 2025-1-7 20:32:00 +0900
 toc: false
 
 header:
-  teaser: /assets/images/2025-01-09_post.jpg
-  overlay_image: /assets/images/2025-01-09_post.png
+  #teaser: /assets/images/2025-01-09_post.jpg #첫페이지에서 요약으로 보이는 페이지.
+  overlay_image: /assets/images/2025-01-09_post.png #포스트 페이지에서 보이는 이미지
   overlay_filter: 0.6 #숫자가 높을수록 어둡다.
 
 tags:
