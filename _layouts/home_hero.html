@@ -38,8 +38,8 @@ layout: archive
     {% elsif post.header.image %}      
       {% capture image %}{{ post.header.image }}{% endcapture %}
     {% else %}
-      {% assign color = "rgb(250, 250, 250)" %}
-      {% assign filter = 0.0 %}
+      {% assign color = "rgba(250, 250, 250,0.8)" %}
+      {% assign filter = 0.8 %}
       {% comment %}
       {% unless color %}
         {% assign min = 96 %}
