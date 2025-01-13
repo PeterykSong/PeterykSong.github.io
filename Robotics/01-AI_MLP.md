@@ -1,6 +1,6 @@
 ---
 title: 다층신경망 실습 Multi Layer Perceptron
-permalink: /owaf/
+permalink: /Robotics/
 date: 2025-01-13 14:39:23 +0900
 #last_modified_at: 2021-11-15 14:39:23 +0900
 toc: true
