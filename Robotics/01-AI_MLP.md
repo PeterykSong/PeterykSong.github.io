@@ -19,5 +19,5 @@ excerpt: "MLP 강의 실습 내용입니다. "
 용어의 정의에서 알 수 있듯, 내용을 이해하기 위해서는 `입력층`, `은닉층`, `출력층`이 중요함을 알 수 있다.
 
 
-<img src="/single_layer_perceptron.jpg" alt="">
+<img src="/single_layer_perceptron.png" alt="">
 
