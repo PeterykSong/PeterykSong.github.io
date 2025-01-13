@@ -6,6 +6,13 @@ date: 2025-01-13 14:39:23 +0900
 toc: true
 toc_sticky: true
 excerpt: "MLP 강의 실습 내용입니다. "
+
+- scope:
+    type: pages
+    values:
+    layout: single
+    author_profile: true
+
 ---
 
 나는 AI관련해서 이제 막 공부하기 시작하는 사람이므로, 설마 이 포스트를 레퍼런스 삼는 사람은 없길 바랄뿐이다. 그저 나의 공부노트일뿐. 
