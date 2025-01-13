@@ -1,0 +1,23 @@
+---
+title: 다층신경망 실습 Multi Layer Perceptron
+permalink: /owaf/
+date: 2025-01-13 14:39:23 +0900
+#last_modified_at: 2021-11-15 14:39:23 +0900
+toc: true
+toc_sticky: true
+excerpt: "MLP 강의 실습 내용입니다. "
+---
+
+나는 AI관련해서 이제 막 공부하기 시작하는 사람이므로, 설마 이 포스트를 레퍼런스 삼는 사람은 없길 바랄뿐이다. 그저 나의 공부노트일뿐. 
+
+인공신경망을 설명할때 흔히 제시하는 `인간의 신경망(Neural Network)` 같은 식상한 내용은 일단 거두절미하자. 
+
+
+>다층 퍼셉트론(Multilayer perceptron, MLP)은 퍼셉트론을 여러층 쌓은 순방향의 인공 신경망이다. 입력층(input layer)과 은닉층(hidden layer)과 출력층(output layer)으로 구성된다. 각 층에서는 활성함수를 통해 입력을 처리한다.  
+[위키피디아](https://ko.wikipedia.org/wiki/%EB%8B%A4%EC%B8%B5_%ED%8D%BC%EC%85%89%ED%8A%B8%EB%A1%A0)
+
+용어의 정의에서 알 수 있듯, 내용을 이해하기 위해서는 `입력층`, `은닉층`, `출력층`이 중요함을 알 수 있다.
+
+
+<img src="/single_layer_perceptron.jpg" alt="">
+
