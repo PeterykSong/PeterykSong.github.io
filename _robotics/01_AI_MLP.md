@@ -1,4 +1,5 @@
 ---
+order: 70
 title: 다층신경망 실습 Multi Layer Perceptron
 permalink: /robotics/
 date: 2025-01-13 14:39:23 +0900

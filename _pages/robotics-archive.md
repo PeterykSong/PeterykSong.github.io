@@ -3,7 +3,7 @@ title: Robotics
 layout: collection
 permalink: /robotics/
 collection: robotics
-sort_by: date
+sort_by: order
 sort_order: reverse
 entries_layout: grid
 header:
