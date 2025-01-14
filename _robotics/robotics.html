@@ -1,7 +1,36 @@
 ---
+layout: archive
 title: "Robotics"
 permalink: /robotics/
-layout: posts
-author_profile: true
-#classes: wide
 ---
+{% comment %}
+<!-- {% assign robotics_posts = site.robotics %}
+<ul>
+  {% for post in robotics_posts %}
+  {% unless post.collection == "robotics" %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endunless %}
+  {% endfor %}
+</ul> -->
+{% comment %}
+
+{% assign robotics_posts = site.robotics | sort: "date" | reverse %}
+{% assign posts_by_year = robotics_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+
+<div class="archive__years">
+  {% for year in posts_by_year %}
+  {% unless post.collection == "robotics" %}
+    <h2>{{ year.name }}</h2>
+    <ul>
+      {% for post in year.items %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        </li>
+      {% endunless %}
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</div>
