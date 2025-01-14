@@ -302,7 +302,8 @@ defaults:
 
   # robotics
   - scope:
-      path: "robotics"
+      type: "robotics"
+      path: ""
     values:
       layout: single
       author_profile: true
