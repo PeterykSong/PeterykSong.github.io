@@ -312,6 +312,7 @@ defaults:
       toc: true
       toc_sticky: true
       classes: wide
+
     # header:
       #   teaser: /assets/images/unsplash/rpi4-rZKdS0wI8Ks.jpg
       #   overlay_image: /assets/images/unsplash/rpi4-rZKdS0wI8Ks.jpg
