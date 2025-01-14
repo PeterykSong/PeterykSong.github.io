@@ -314,7 +314,7 @@ defaults:
       related: true
       toc: true
       toc_sticky: true
-      classes: wide
+      #classes: wide
 
     # header:
       #   teaser: /assets/images/unsplash/rpi4-rZKdS0wI8Ks.jpg
