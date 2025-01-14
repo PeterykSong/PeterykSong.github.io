@@ -14,7 +14,7 @@ permalink: /robotics/
   {% endunless %}
   {% endfor %}
 </ul> -->
-{% comment %}
+{% endcomment %}
 
 {% assign robotics_posts = site.robotics | sort: "date" | reverse %}
 {% assign posts_by_year = robotics_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
