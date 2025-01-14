@@ -217,9 +217,9 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
-  robotics:
-    output: true
-    permalink: /:collection/:path/
+  # robotics:
+  #   output: true
+  #   permalink: /:collection/:path/
 
 
 
