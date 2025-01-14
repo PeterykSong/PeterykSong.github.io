@@ -3,12 +3,32 @@ layout: archive
 title: "Robotics"
 permalink: /robotics/
 ---
-
-{% assign robotics_posts = site.robotics %}
+{% comment %}
+<!-- {% assign robotics_posts = site.robotics %}
 <ul>
   {% for post in robotics_posts %}
+  {% unless post.collection == "robotics" %}
     <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
+  {% endunless %}
   {% endfor %}
-</ul>
+</ul> -->
+{% endcomment %}
+
+{% assign robotics_posts = site.robotics | sort: "date" | reverse %}
+{% assign posts_by_year = robotics_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+
+<div class="archive__years">
+  {% for year in posts_by_year %}
+    <h2>{{ year.name }}</h2>
+    <ul>
+      {% for post in year.items %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</div>
