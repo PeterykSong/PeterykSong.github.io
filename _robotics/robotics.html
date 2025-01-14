@@ -4,14 +4,11 @@ title: "Robotics"
 permalink: /robotics/
 ---
 
-{% assign robotics_posts = site.collections.robotics.docs | sort: "date" | reverse %}
-
+{% assign robotics_posts = site.robotics %}
 <ul>
   {% for post in robotics_posts %}
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <p>{{ post.excerpt | strip_html }}</p>
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
     </li>
   {% endfor %}
 </ul>
