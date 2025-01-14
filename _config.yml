@@ -219,9 +219,9 @@ collections:
     permalink: /:collection/:path/
   robotics:
     output: true
-    permalink: /robotics/:name/
-    sort_by: date
-    order: descending
+    permalink: /:collection/:path/
+    # sort_by: date
+    # order: descending
 
 
 
