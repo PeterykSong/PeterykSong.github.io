@@ -259,9 +259,9 @@ li ol {
   }
 
   code {
-    font-size: 1em; /* 기본 폰트 크기와 동일하게 설정 */
+    font-size: inherit; /* 기본 폰트 크기와 동일하게 설정 */
     font-family: inherit; /* 부모 요소의 글꼴을 따름 */
-    background-color: #f0f0f0c9; /* 선택 사항: 강조 효과를 위해 배경색 추가 */
+    background-color: gray; /* 선택 사항: 강조 효과를 위해 배경색 추가 */
     padding: 2px 4px; /* 선택 사항: 텍스트와 배경 간 간격 추가 */
     border-radius: 4px; /* 선택 사항: 모서리를 둥글게 */
   }
