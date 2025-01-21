@@ -25,8 +25,11 @@ SLAM, 즉 로봇이 자신의 센서정보를 바탕으로 하여 현 시점의 
 
 ![Image Registration](/assets/images/robotics/single_layer_perceptron.png)
 
-![Image Registration](./single_layer_perceptron.png)
+![Image Registration](./image_regitration.jpg)
 
-![Image Registration](/single_layer_perceptron.png)
+
+![Image Registration](/image_regitration.jpg)
+
+![Image Registration](image_regitration.jpg)
 
 [이미지 Registration(정합)](https://kr.mathworks.com/discovery/image-registration.html)
