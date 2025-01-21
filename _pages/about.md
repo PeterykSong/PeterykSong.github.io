@@ -10,7 +10,7 @@ toc_sticky: true
 tags:
 
 ---
-  2006년 기계공학부로 학사학위를 받고, 2008년 벽면이동로봇의 제어를 주제로 하여 석사학위를 수여받았습니다. 이후, LG전자에서 2010년부터 로봇제품의 제어 HW개발 담당자로서 업무를 담당하고 있습니다. 2025년부터 직장과 병행하여 성균관대학교 유현우 교수님 지도하에, **[Lair Lab](https://lair.skku.edu/)** 박사학위과정을 시작했습니다.
+  2006년 기계공학부로 학사학위를 받고, 2008년 벽면이동로봇의 제어를 주제로 하여 석사학위를 수여받았습니다. 이후, LG전자에서 2010년부터 로봇제품의 제어 HW개발 담당자로서 업무를 담당하고 있습니다. 2025년부터 직장과 병행하여 성균관대학교 유현우 교수님 지도하에, **[Lair Lab](https://lair.skku.edu/){: target="_blank" }** 박사학위과정을 시작했습니다.
 
 I earned my bachelor's degree in **Mechanical Engineering** in 2006 and completed my **master's degree in 2008** with a thesis on the control of wall-climbing robots. Since 2010, I have been working at **LG Electronics** as a **control hardware developer for robotic products**. Starting in 2025, I began **pursuing a Ph.D.** at **[Lair Lab](https://lair.skku.edu/)** under the guidance of Professor **Hyunwoo Yoo** at Sungkyunkwan University.
 
