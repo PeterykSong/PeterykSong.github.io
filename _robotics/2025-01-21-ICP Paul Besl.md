@@ -25,7 +25,7 @@ SLAM, 즉 로봇이 자신의 센서정보를 바탕으로 하여 현 시점의 
 이제 처음 SLAM관련 기본 논문을 읽어보는 입장에서, 이 이후에 얼마나 많은 발전이 있었을지 가늠할 수 없지만, 적어도 이 논문이 작성된 1998년도부터, 2000년대 초반까지는 매우 중요한 이정표같은 것이리라 생각이 든다. 
 
 
-![Image Registration](/assets/images/robotics/image_regitration.jpg))
+![Image Registration](/assets/images/robotics/image_regitration.jpg)  
 [이미지 Registration(정합)](https://kr.mathworks.com/discovery/image-registration.html)
 
 
@@ -34,21 +34,21 @@ SLAM, 즉 로봇이 자신의 센서정보를 바탕으로 하여 현 시점의 
 # 논문의 목차
   1. Introduction
   2. 문헌 리뷰 (요새 이런걸 메타 연구라고 하나보다.)
-  3. Preliminaries. (수학적 선수학습내용)
-      3.1. 기본공식식
-        3.1.1. 특정점과 점들간의 거리
-        3.1.2. 특정점과 선들과의 거리
-        3.1.3. 특정점과 삼각형들과의 거리 (Triangle을 계산하지만, 후에는 Polygon이 될듯)
-      3.2. 특정점과 함수객체와의 거리를 최소화(최적화)하는 방법 (Newton minimaztion approch를 사용함)
-      3.3. 특정점과 암시적(후보의)객체와의 거리 계산. 즉 위의 뉴턴 최소화방법을 사용한다. 
-  4. ICP 알고리즘
-      4.1. 알고리즘의 설명
-      4.2. 수렴정리 (Convergence Theorem)
-      4.3. ICP알고리즘 가속화 방법
-      4.4. 다른 최소화 접근법
-  5. Set of Initial Registration
-     여기서부터는 좀 더 읽어봐야겠다. 
-  6. 실험 결과
-  7. 결론
-  8. 향후 방향
+  3. Preliminaries. (수학적 선수학습내용)  
+      3.1. 기본공식식  
+        3.1.1. 특정점과 점들간의 거리  
+        3.1.2. 특정점과 선들과의 거리  
+        3.1.3. 특정점과 삼각형들과의 거리 (Triangle을 계산하지만, 후에는 Polygon이 될듯)  
+      3.2. 특정점과 함수객체와의 거리를 최소화(최적화)하는 방법 (Newton minimaztion approch를 사용함)  
+      3.3. 특정점과 암시적(후보의)객체와의 거리 계산. 즉 위의 뉴턴 최소화방법을 사용한다.   
+  4. ICP 알고리즘  
+      4.1. 알고리즘의 설명  
+      4.2. 수렴정리 (Convergence Theorem)  
+      4.3. ICP알고리즘 가속화 방법  
+      4.4. 다른 최소화 접근법  
+  5. Set of Initial Registration  
+     여기서부터는 좀 더 읽어봐야겠다.   
+  6. 실험 결과  
+  7. 결론  
+  8. 향후 방향  
 
