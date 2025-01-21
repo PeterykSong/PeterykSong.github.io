@@ -17,7 +17,7 @@ subtitle                 : "Sing a Song. Portfolio and Archive of PeterykSong" #
 name                     : &name "송영국" # &name is a YAML anchor which can be *referenced later
 description              : &description "이 웹사이트는 Github Pages와 Minimal-Mistakes Jekyll 테마 및 오원석님(www.wonseoko.com) 디자인을 사용해 만들어졌습니다."
 url                      : https://PeterykSong.github.io# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/" # the subpath of your site, e.g. "/blog"
+baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "PeterykSong/PeterykSong.github.io"
 teaser                   : https://source.unsplash.com/random # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
