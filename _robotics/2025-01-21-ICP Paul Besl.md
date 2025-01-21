@@ -24,13 +24,10 @@ SLAM, 즉 로봇이 자신의 센서정보를 바탕으로 하여 현 시점의 
 
 이제 처음 SLAM관련 기본 논문을 읽어보는 입장에서, 이 이후에 얼마나 많은 발전이 있었을지 가늠할 수 없지만, 적어도 이 논문이 작성된 1998년도부터, 2000년대 초반까지는 매우 중요한 이정표같은 것이리라 생각이 든다. 
 
-<div style="text-align: center;">  
-![Image Registration](/assets/images/robotics/image_regitration.jpg)  
-[이미지 Registration(정합)](https://kr.mathworks.com/discovery/image-registration.html)
-</div>
 
 <div style="text-align: center;">
   <img src="/assets/images/robotics/image_regitration.jpg" alt="Image Registration">
+  [이미지 Registration(정합)](https://kr.mathworks.com/discovery/image-registration.html)
 </div>
 
 이제 논문을 자세히 읽어내려가보자. 
