@@ -27,8 +27,10 @@ SLAM, 즉 로봇이 자신의 센서정보를 바탕으로 하여 현 시점의 
 
 <div style="text-align: center;">
   <img src="/assets/images/robotics/image_regitration.jpg" alt="Image Registration">
-  [이미지 Registration(정합)](https://kr.mathworks.com/discovery/image-registration.html)
+  <figcaption>이미지 Registration(정합) <br> https://kr.mathworks.com/discovery/image-registration.html<br> </figcaption>
 </div>
+
+[캡션을 어디에 넣을까](https://kr.mathworks.com/discovery/image-registration.html)
 
 이제 논문을 자세히 읽어내려가보자. 
 
