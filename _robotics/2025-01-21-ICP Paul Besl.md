@@ -46,7 +46,7 @@ SLAM, 즉 로봇이 자신의 센서정보를 바탕으로 하여 현 시점의 
       3.2. 포인트셋의 정합  
   4. ICP 알고리즘  
       4.1. 알고리즘의 설명  
-          : 1,2,3,4 를 오차 tolerance $$ t $$ 가 특정값 이하로 내려갈때까지 반복한다. 
+          : 1,2,3,4 를 오차 tolerance $$t$$ 가 특정값 이하로 내려갈때까지 반복한다. 
         a. Compute Closest point / 결과 : 최근접점 집합
         b. Compute Registration / 결과 : 변환벡터
         c. Apply Registration 
@@ -60,6 +60,7 @@ SLAM, 즉 로봇이 자신의 센서정보를 바탕으로 하여 현 시점의 
 
   5. Set of Initial Registration  
       : ICP알고리즘을 통해 평행이동한 결과가 Local minimum에 수렴함은 증명하였지만, 이 지점이 Global Minimum임을 보장하진 못한다.    
+
   6. 실험 결과  
   7. 결론  
   8. 향후 방향  
