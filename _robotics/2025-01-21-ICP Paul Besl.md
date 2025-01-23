@@ -37,19 +37,29 @@ SLAM, 즉 로봇이 자신의 센서정보를 바탕으로 하여 현 시점의 
   1. Introduction
   2. 문헌 리뷰 (요새 이런걸 메타 연구라고 하나보다.)
   3. Preliminaries. (수학적 선수학습내용)  
-      3.1. 기본공식식  
-        3.1.1. 특정점과 점들간의 거리  
-        3.1.2. 특정점과 선들과의 거리  
-        3.1.3. 특정점과 삼각형들과의 거리 (Triangle을 계산하지만, 후에는 Polygon이 될듯)  
-      3.2. 특정점과 함수객체와의 거리를 최소화(최적화)하는 방법 (Newton minimaztion approch를 사용함)  
-      3.3. 특정점과 암시적(후보의)객체와의 거리 계산. 즉 위의 뉴턴 최소화방법을 사용한다.   
+      3.1. 거리 계산을 위한 기본공식들
+          3.1.1. 특정점과 점들간의 거리  
+          3.1.2. 특정점과 선들과의 거리  
+          3.1.3. 특정점과 삼각형들과의 거리 (Triangle을 계산하지만, 후에는 Polygon이 될듯)  
+          3.1.4. 특정점과 함수객체와의 거리를 최소화(최적화)하는 방법 (Newton minimaztion approch를 사용함)  
+          3.1.5. 특정점과 암시적(후보의)객체와의 거리 계산. 즉 위의 뉴턴 최소화방법을 사용한다. 
+      3.2. 포인트셋의 정합  
   4. ICP 알고리즘  
       4.1. 알고리즘의 설명  
+          : 1,2,3,4 를 오차 tolerance $$ t $$ 가 특정값 이하로 내려갈때까지 반복한다. 
+        a. Compute Closest point / 결과 : 최근접점 집합
+        b. Compute Registration / 결과 : 변환벡터
+        c. Apply Registration 
+        d. Iteration 종료조건의 계산
+
       4.2. 수렴정리 (Convergence Theorem)  
-      4.3. ICP알고리즘 가속화 방법  
-      4.4. 다른 최소화 접근법  
+      4.3. 다른 최소화 접근법들
+        a. Accelerated ICP : 보간법의 사용 (Line search 및 parabolic interpolation)  
+      4.4. 다른 최소화 접근법
+          : 몇가지 제안이 있지만, 결국 ACC ICP가 유리하더라. 
+
   5. Set of Initial Registration  
-     여기서부터는 좀 더 읽어봐야겠다.   
+      : ICP알고리즘을 통해 평행이동한 결과가 Local minimum에 수렴함은 증명하였지만, 이 지점이 Global Minimum임을 보장하진 못한다.    
   6. 실험 결과  
   7. 결론  
   8. 향후 방향  
