@@ -47,10 +47,10 @@ SLAM, 즉 로봇이 자신의 센서정보를 바탕으로 하여 현 시점의 
   4. ICP 알고리즘  
       4.1. 알고리즘의 설명  
           : 1,2,3,4 를 오차 tolerance $$t$$ 가 특정값 이하로 내려갈때까지 반복한다. 
-        a. Compute Closest point / 결과 : 최근접점 집합
-        b. Compute Registration / 결과 : 변환벡터
-        c. Apply Registration 
-        d. Iteration 종료조건의 계산
+         a. Compute Closest point / 결과 : 최근접점 집합
+         b. Compute Registration / 결과 : 변환벡터
+         c. Apply Registration 
+         d. Iteration 종료조건의 계산
 
       4.2. 수렴정리 (Convergence Theorem)  
       4.3. 다른 최소화 접근법들
@@ -59,7 +59,7 @@ SLAM, 즉 로봇이 자신의 센서정보를 바탕으로 하여 현 시점의 
           : 몇가지 제안이 있지만, 결국 ACC ICP가 유리하더라. 
 
   5. Set of Initial Registration  
-      : ICP알고리즘을 통해 평행이동한 결과가 Local minimum에 수렴함은 증명하였지만, 이 지점이 Global Minimum임을 보장하진 못한다.    
+      : ICP알고리즘을 통해 평행이동한 결과가 Local minimum에 수렴함은 증명하였지만, 이 지점이 Global Minimum임을 보장하진 못한다.   
 
   6. 실험 결과  
   7. 결론  
