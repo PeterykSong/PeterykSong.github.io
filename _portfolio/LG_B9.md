@@ -3,10 +3,10 @@ order: 71
 title: "상업용 로봇청소기"
 excerpt: "대면적 공간을 목표로 하는 상업용 로봇청소기"
 header:
-  teaser: /assets/images/portfolio/LG_B9.jpg
+  teaser: /assets/images/portfolio/LG_B9.png
 gallery:
-  - url: /assets/images/portfolio/LG_B9.jpg
-    image_path: /assets/images/portfolio/LG_B9.jpg
+  - url: /assets/images/portfolio/LG_B9.png
+    image_path: /assets/images/portfolio/LG_B9.png
 ---
 
 # LG B9 상업용 로봇청소기 (2017. 5 ~ 2021. 12.)
