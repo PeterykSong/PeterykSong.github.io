@@ -1,5 +1,5 @@
 ---
-order: 71
+order: 69
 title: "상업용 로봇청소기"
 excerpt: "대면적 공간을 목표로 하는 상업용 로봇청소기"
 header:
