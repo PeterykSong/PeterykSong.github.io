@@ -197,10 +197,17 @@ li ol {
 
   .archive__item-teaser {
     background-color: #f9f9f9bd;
+  
+    img {
+      width: 100%; /* 컨테이너의 너비에 맞춤 */
+      height: 200px; /* 고정된 높이 */
+      object-fit: cover; /* 이미지 비율 유지하며 고정된 크기에 맞춤 */
+    }
+  
     @include breakpoint($small) {
       max-height: 200px;
     }
-
+  
     @include breakpoint($medium) {
       max-height: 200px;
     }
