@@ -41,7 +41,7 @@
 
   {% if include.overlay_color or include.overlay_image %}
     <div class="wrapper">      
-      <h1 id="page-title" class="page__title" itemprop="headline">
+      <h2 id="page-title" class="page__title" itemprop="headline">
         <a href="{{ url | relative_url }}">
         {% if paginator and site.paginate_show_page_num %}
           {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
@@ -61,6 +61,6 @@
     <img src="{{ include.image | relative_url }}" alt="{{ image_description }}" class="page__hero-image">
   {% endif %}
   {% if include.caption %}
-    <span class="page__hero-caption" style="font-size: 1.2em; margin-left: 20px; margin-right: 20px;">{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+    <span class="page__hero-caption" style="font-size: 0.6em; margin-left: 20px; margin-right: 20px;">{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
   {% endif %}
 </div>
