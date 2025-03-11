@@ -41,7 +41,7 @@
 
   {% if include.overlay_color or include.overlay_image %}
     <div class="wrapper">      
-      <h2 id="page-title" class="page__title" itemprop="headline" style="font-size: 1.0rem; margin-bottom: 5px;">
+      <h2 id="page-title" class="page__title" itemprop="headline" style="font-size: 1.2rem; margin-bottom: 5px;">
         <a href="{{ url | relative_url }}">
         {% if paginator and site.paginate_show_page_num %}
           {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
@@ -49,11 +49,11 @@
           {{ include.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
         {% endif %}
         </a>
-      </h1>
+      </h2>
       {% if include.tagline %}
-        <p class="page__lead">{{ include.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</a></p>
+      <p class="page__lead" style="font-size: 1rem; margin-top: 5px;"> {{ include.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</a></p>
       {% elsif include.show_overlay_excerpt != false and include.excerpt %}
-        <p class="page__lead">{{ include.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</a></p>
+      <p class="page__lead" style="font-size: 1rem; margin-top: 5px;"> {{ include.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</a></p>
       {% endif %}
       {% include hero__meta.html %}
     </div>
