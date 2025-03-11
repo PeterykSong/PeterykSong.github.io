@@ -8,6 +8,9 @@
   하지만, 요약문이 HTML 구문인 경우.. 표시가 올바르게 되지않는 문제가 발생할 수 있습니다.
   따라서 요약문의 내용을 일반 텍스트화 시켜주는 strip_html 필터를 사용할 수도 있지만, 
   본문을 자동으로 요약한 경우 미리보기 내용이 이상하게 깨져서 보일 수 있습니다.
+  {% elsif include.show_overlay_excerpt != false and include.excerpt %}
+  <p class="page__lead" style="font-size: 1rem; margin-top: 5px;"> {{ include.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</a></p>
+
 {% endcomment %}
 
 {% capture overlay_img_path %}{{ include.overlay_image | relative_url }}{% endcapture %}
@@ -41,7 +44,7 @@
 
   {% if include.overlay_color or include.overlay_image %}
     <div class="wrapper">      
-      <h2 id="page-title" class="page__title" itemprop="headline" style="font-size: 1.2rem; margin-bottom: 5px;">
+      <h2 id="page-title" class="page__title" itemprop="headline" style="font-size: 1.2rem; margin-bottom: 2px;">
         <a href="{{ url | relative_url }}">
         {% if paginator and site.paginate_show_page_num %}
           {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
@@ -51,9 +54,7 @@
         </a>
       </h2>
       {% if include.tagline %}
-      <p class="page__lead" style="font-size: 1rem; margin-top: 5px;"> {{ include.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</a></p>
-      {% elsif include.show_overlay_excerpt != false and include.excerpt %}
-      <p class="page__lead" style="font-size: 1rem; margin-top: 5px;"> {{ include.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</a></p>
+      <p class="page__lead" style="font-size: 1rem; margin-top: 1px;"> {{ include.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</a></p>
       {% endif %}
       {% include hero__meta.html %}
     </div>
