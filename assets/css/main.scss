@@ -181,9 +181,15 @@ li ol {
     }
   }
 
+  .archive__item {
+    padding: 10px;  // 내부 여백 조절
+    margin-bottom: 10px;  // 아이템 간격 조절
+    max-height: 150px;  // 박스 크기 제한
+    overflow: hidden;  // 넘치는 내용 자르기
+  }
   .archive__item-title {
     margin-top: 0.5em;
-    font-size: $type-size-5;
+    font-size: $type-size-4;
   }
 
   .archive__item-excerpt {
@@ -191,7 +197,7 @@ li ol {
 
     @include breakpoint($medium) {
       display: block;
-      font-size: $type-size-5;
+      font-size: $type-size-4;
     }
   }
 
