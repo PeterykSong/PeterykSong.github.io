@@ -181,6 +181,15 @@ li ol {
     }
   }
 
+  .page__hero--overlay .wrapper {
+    padding: 10px 0;  // 위아래 패딩을 줄여서 크기 감소
+  }
+  
+  .page__title {
+    font-size: 1.0rem;  // 제목 크기 조정 (기본값보다 작게)
+    margin-bottom: 5px;  // 제목 아래 여백 줄이기
+  }
+
   .archive__item {
     padding: 10px;  // 내부 여백 조절
     margin-bottom: 10px;  // 아이템 간격 조절
