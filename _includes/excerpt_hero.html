@@ -41,7 +41,7 @@
 
   {% if include.overlay_color or include.overlay_image %}
     <div class="wrapper">      
-      <h2 id="page-title" class="page__title" itemprop="headline">
+      <h2 id="page-title" class="page__title" itemprop="headline" style="font-size: 1.0rem; margin-bottom: 5px;">
         <a href="{{ url | relative_url }}">
         {% if paginator and site.paginate_show_page_num %}
           {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
