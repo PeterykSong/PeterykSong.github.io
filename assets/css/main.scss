@@ -216,16 +216,16 @@ li ol {
 
     img {
       width: 100%; /* 컨테이너의 너비에 맞춤 */
-      height: 300px; /* 고정된 높이 */
+      height: auto; /* 고정된 높이 */
       object-fit: contain; /* 이미지 비율 유지하며 고정된 크기에 맞춤 */
     }
   
     @include breakpoint($small) {
-      max-height: 150px;
+      max-height: 100px;
     }
   
     @include breakpoint($medium) {
-      max-height: 150px;
+      max-height: 100px;
     }
   }
 
