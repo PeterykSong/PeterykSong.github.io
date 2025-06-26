@@ -212,12 +212,25 @@ li ol {
 
   .archive__item-teaser {
     background-color: #f9f9f9bd;
-  
+ 
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     img {
-      width: 100%; /* 컨테이너의 너비에 맞춤 */
-      height: auto; /* 고정된 높이 */
-      object-fit: contain; /* 이미지 비율 유지하며 고정된 크기에 맞춤 */
+      width: 100%;
+      height: auto;
+      max-height: 300px; // 너무 큰 이미지 방지
+      object-fit: contain;
     }
+}
+    // img {
+    //   width: 100%; /* 컨테이너의 너비에 맞춤 */
+    //   height: auto; /* 고정된 높이 */
+    //   object-fit: contain; /* 이미지 비율 유지하며 고정된 크기에 맞춤 */
+    // }
   
     @include breakpoint($small) {
       max-height: 150px;
