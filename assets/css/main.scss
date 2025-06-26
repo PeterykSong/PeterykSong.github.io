@@ -206,7 +206,7 @@ li ol {
 
     @include breakpoint($medium) {
       display: block;
-      font-size: $type-size-3;
+      font-size: 0.8rem;
     }
   }
 
