@@ -3,7 +3,7 @@ title: "바쁘다"
 
 #excerpt: "첫번째 포스트, Github Blog를 시작하면서"
 
-last_modified_at: 2025-5-14 12:44:00 +0900
+last_modified_at: 2025-6-26 20:44:00 +0900
 toc: false
 
 header:
