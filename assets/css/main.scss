@@ -193,38 +193,40 @@ li ol {
   .archive__item {
     padding: 10px;  // 내부 여백 조절
     margin-bottom: 10px;  // 아이템 간격 조절
-    max-height: 100px;  // 박스 크기 제한
+    max-height: 300px;  // 박스 크기 제한
     overflow: hidden;  // 넘치는 내용 자르기
   }
   .archive__item-title {
     margin-top: 0.5em;
-    font-size: $type-size-3;
+    font-size: 0.9rem;
   }
 
   .archive__item-excerpt {
     display: none;
+    font-size: 0.8rem;
 
     @include breakpoint($medium) {
       display: block;
-      font-size: $type-size-3;
+      font-size: 0.8rem;
     }
   }
 
   .archive__item-teaser {
     background-color: #f9f9f9bd;
-  
+
     img {
-      width: 100%; /* 컨테이너의 너비에 맞춤 */
-      height: 150px; /* 고정된 높이 */
-      object-fit: cover; /* 이미지 비율 유지하며 고정된 크기에 맞춤 */
+      width: 100%;
+      height: 200px; /* 고정 높이 설정 */
+      object-fit: cover; /* 이미지 비율 유지하며 컨테이너를 꽉 채움 */
+      display: block;
     }
   
     @include breakpoint($small) {
-      max-height: 150px;
+      max-height: 300px;
     }
   
     @include breakpoint($medium) {
-      max-height: 150px;
+      max-height: 300px;
     }
   }
 
@@ -293,7 +295,8 @@ li ol {
     font-family: inherit; /* 부모 요소의 글꼴을 따름 */
     background-color: gray; /* 선택 사항: 강조 효과를 위해 배경색 추가 */
     padding: 2px 4px; /* 선택 사항: 텍스트와 배경 간 간격 추가 */
-    border-radius: 4px; /* 선택 사항: 모서리를 둥글게 */	}
+    border-radius: 4px; /* 선택 사항: 모서리를 둥글게 */
+  }
 
   ul {
     &:last-child {
