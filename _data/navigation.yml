@@ -26,6 +26,13 @@ main:
     url: /about/
   - title: "Robotics"
     url: /robotics/
+    children:
+      - title: "SLAM"
+        url: /robotics/slam/
+      - title: "ICP"
+        url: /robotics/icp/
+      - title: "LiDAR"
+        url: /robotics/lidar/
   - title: "Posts"
     url: /year-archive/
   - title: "Portfolio"
