@@ -65,7 +65,7 @@ $$
 
 ### 1. 선형 시스템의 일반 형태
 $$
-\dot{x}(t) = A x(t) + B u(t), \quad y(t) = C x(t) + D u(t)
+\dot{x}(t) = A x(t) + B u(t), \qquad y(t) = C x(t) + D u(t)
 $$
 
 - $A$: 상태천이 행렬 (system dynamics)  
@@ -77,13 +77,11 @@ $$
 
 그러나 교재에서는 아래처럼 표현하고 있다. 
 
-$$ 
-\begin{aligned}
-\dot{x} &= Ax + Bu  \\
-y &= Cx 
-\end{aligned}
+$$\begin{aligned}
+\dot{x} &= Ax + Bu \\
+  y &= Cx 
+\end{aligned}$$
 
-$$
 어라. D는 없네. 좀 더 찾아보니 이런 의미가 있다고 한다. 맞나? 
 
 
