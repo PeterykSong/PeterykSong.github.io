@@ -261,6 +261,20 @@ defaults:
       comments: false
       sidebar:
         nav: "docs"
+  # _robotics
+  - scope:
+      path: ""
+      type: robotics
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      show_date: true
+      comments: true
+      share: true
+      related: true
+      toc: true
+      toc_sticky: true
   # jekyll
   - scope:
       path: "jekyll"

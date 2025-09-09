@@ -34,7 +34,7 @@ main:
       - title: "LiDAR"
         url: /robotics/lidar/
       - title: "Estimation Theory"
-        url: /robotics/estimation-theory/
+        url: /robotics/estimation_theory/
   - title: "Posts"
     url: /year-archive/
   - title: "Portfolio"
