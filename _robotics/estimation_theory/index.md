@@ -5,7 +5,7 @@ permalink: /robotics/estimation-theory/
 ---
 
 {% assign robotics_items = site.robotics | where: "tags", "EstimationTheory" | sort: 'date' | reverse %}
-{% assign subfolder_items = site.pages | where: "path", "_robotics/estimation_theory/" | where: "tags", "EstimationTheory" | sort: 'date' | reverse %}
+{% assign subfolder_items = site.robotics | where_exp: "item", "item.path contains 'estimation_theory/'" | where: "tags", "EstimationTheory" | sort: 'date' | reverse %}
 {% assign all_items = robotics_items | concat: subfolder_items %}
 
 <ul>
