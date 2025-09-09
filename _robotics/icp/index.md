@@ -10,6 +10,6 @@ permalink: /robotics/icp/
 
 <ul>
   {% for post in all_items %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a> <span>{{ post.date | date: site.date_format }}</span></li>
+    <li><a href="{{ post.url }}">{{ post.title }}</a>{% if post.date %} <span>{{ post.date | date: site.date_format }}</span>{% endif %}</li>
   {% endfor %}
 </ul>
