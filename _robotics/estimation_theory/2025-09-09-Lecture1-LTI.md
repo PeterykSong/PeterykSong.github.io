@@ -601,9 +601,9 @@ $$
 ⇒ **제어 불가능**.
 
 ### 2) PBH 테스트
-- 고유값: \( \lambda_1=0,\;\lambda_2=-1 \)
+- 고유값: $\lambda_1=0,\;\lambda_2=-1$
 
-\(\lambda=0\)에 대해
+$\lambda=0$에 대해
 $$
 [A-\lambda I\;\;B]
 =
@@ -612,10 +612,10 @@ $$
 0&-1& 1
 \end{bmatrix},
 \quad \operatorname{rank}=1<2
-\Rightarrow \text{(λ=0 모드 제어 불가능)}.
+\Rightarrow \text{($\lambda=0$ 모드 제어 불가능)}.
 $$
 
-\(\lambda=-1\)에 대해
+$\lambda=-1$에 대해
 $$
 [A-\lambda I\;\;B]
 =
@@ -626,7 +626,7 @@ $$
 0&0&1
 \end{bmatrix},
 \quad \operatorname{rank}=2
-\Rightarrow \text{(λ=-1 모드 제어 가능)}.
+\Rightarrow \text{($\lambda=-1$ 모드 제어 가능)}.
 $$
 
 ### 3) 해석
@@ -634,11 +634,11 @@ $$
 $$
 \dot{x}_1=0,\qquad \dot{x}_2=-x_2+u.
 $$
-- \(x_1\)은 **입력과 무관**하게 상수 유지(λ=0 모드) → **제어 불가능 모드**.  
-- \(x_2\)는 입력으로 제어 가능(λ=-1 모드).
+- $x_1$은 **입력과 무관**하게 상수 유지($\lambda=0$ 모드) → **제어 불가능 모드**.  
+- $x_2$는 입력으로 제어 가능($\lambda=-1$ 모드).
 
 ### 4) 안정화 가능성 (Stabilizability)
-- 제어 불가능 모드가 **λ=0 (한계 안정)** → 일반적으로 안정화 가능성은 **Re(λ)<0**(엄격 안정)만 허용.  
+- 제어 불가능 모드가 **$\lambda=0$ (한계 안정)** → 일반적으로 안정화 가능성은 **Re($\lambda$)<0**(엄격 안정)만 허용.  
 - 따라서 이 시스템은 **stabilizable이 아님**.
 
 ---
@@ -663,7 +663,7 @@ $$
 ⇒ **제어 불가능**.
 
 ### 2) PBH 테스트
-- 고유값: $ \lambda_1=-2,\;\lambda_2=-1 $
+- 고유값: $\lambda_1=-2,\;\lambda_2=-1$
 
 $\lambda=-2$에 대해
 $$
@@ -673,10 +673,10 @@ $$
 0&1&1
 \end{bmatrix},
 \quad \operatorname{rank}=1<2
-\Rightarrow \text{(λ=-2 모드 제어 불가능)}.
+\Rightarrow \text{($\lambda=-2$ 모드 제어 불가능)}.
 $$
 
-\(\lambda=-1\)에 대해
+$\lambda=-1$에 대해
 $$
 [A-\lambda I\;\;B]
 =
@@ -687,28 +687,28 @@ $$
 0&0&1
 \end{bmatrix},
 \quad \operatorname{rank}=2
-\Rightarrow \text{(λ=-1 모드 제어 가능)}.
+\Rightarrow \text{($\lambda=-1$ 모드 제어 가능)}.
 $$
 
 ### 3) 해석
 $$
 \dot{x}_1=-2x_1,\qquad \dot{x}_2=-x_2+u.
 $$
-- \(x_1\) (λ=-2)는 **입력으로 건드릴 수 없지만 자체적으로 지수 감쇠** → 제어 불가능 **이지만 안정 모드**.  
-- \(x_2\) (λ=-1)는 입력으로 제어 가능.
+- $x_1$ ($\lambda=-2$)는 **입력으로 건드릴 수 없지만 자체적으로 지수 감쇠** → 제어 불가능 **이지만 안정 모드**.  
+- $x_2$ ($\lambda=-1$)는 입력으로 제어 가능.
 
 ### 4) 안정화 가능성
-- 제어 불가능 모드의 고유값 \( -2 \)가 **Re(λ)<0** 이므로,  
+- 제어 불가능 모드의 고유값 $-2$가 **Re($\lambda$)<0** 이므로,  
   이 시스템은 **stabilizable** (상태 피드백으로 전체를 안정하게 만들 수 있음).
 
 ---
 
 ## 핵심 요약
-- **제어 불가능 모드**: 어떤 고유값 방향이 입력 \(B\)로는 전혀 자극될 수 없는 경우  
+- **제어 불가능 모드**: 어떤 고유값 방향이 입력 $B$로는 전혀 자극될 수 없는 경우  
   - 판별: $\operatorname{rank}[A-\lambda I\;\;B]<n$ (PBH), 또는 $\operatorname{rank}(\mathcal{C})<n$.  
-- **Stabilizability**: 제어 불가능 모드가 존재해도 **그 모드들이 모두 Re(λ)<0**이면 OK.  
-  - 예제 1: λ=0 → **stabilizable 아님**  
-  - 예제 2: λ=-2 → **stabilizable**
+- **Stabilizability**: 제어 불가능 모드가 존재해도 **그 모드들이 모두 Re($\lambda$)<0**이면 OK.  
+  - 예제 1: $\lambda=0$ → **stabilizable 아님**  
+  - 예제 2: $\lambda=-2$ → **stabilizable**
 
 
 <br>
