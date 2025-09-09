@@ -4,8 +4,8 @@ title: "SLAM"
 permalink: /robotics/slam/
 ---
 
-{% assign robotics_items = site.robotics | where_exp: "p", "p.tags contains 'SLAM'" | sort: 'date' | reverse %}
-{% assign subfolder_items = site.pages | where_exp: "p", "p.path contains '_robotics/slam/' and p.tags contains 'SLAM'" | sort: 'date' | reverse %}
+{% assign robotics_items = site.robotics | where: "tags", "SLAM" | sort: 'date' | reverse %}
+{% assign subfolder_items = site.pages | where: "path", "_robotics/slam/" | where: "tags", "SLAM" | sort: 'date' | reverse %}
 {% assign all_items = robotics_items | concat: subfolder_items %}
 
 <ul>

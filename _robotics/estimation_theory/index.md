@@ -4,8 +4,8 @@ title: "Estimation Theory"
 permalink: /robotics/estimation-theory/
 ---
 
-{% assign robotics_items = site.robotics | where_exp: "p", "p.tags contains 'EstimationTheory'" | sort: 'date' | reverse %}
-{% assign subfolder_items = site.pages | where_exp: "p", "p.path contains '_robotics/estimation-theory/' and p.tags contains 'EstimationTheory'" | sort: 'date' | reverse %}
+{% assign robotics_items = site.robotics | where: "tags", "EstimationTheory" | sort: 'date' | reverse %}
+{% assign subfolder_items = site.pages | where: "path", "_robotics/estimation_theory/" | where: "tags", "EstimationTheory" | sort: 'date' | reverse %}
 {% assign all_items = robotics_items | concat: subfolder_items %}
 
 <ul>
