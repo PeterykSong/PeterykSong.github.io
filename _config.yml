@@ -345,7 +345,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-  - jekyll-algolia
+  # - jekyll-algolia  # GitHub Pages 미지원 → 비활성화
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -355,7 +355,7 @@ whitelist:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-  - jekyll-algolia
+  # - jekyll-algolia  # GitHub Pages 미지원 → 비활성화
 
 
 # Archives
