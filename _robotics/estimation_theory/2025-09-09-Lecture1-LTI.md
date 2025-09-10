@@ -63,7 +63,7 @@ $$
 현재 강의에서는 선형시스템을 기본으로 한다. 
 기본적으로 선형시스템은 아래와 같이 정의한다. 
 
-### 1. 선형 시스템의 일반 형태
+### 2-1. 선형 시스템의 일반 형태
 $$
 \dot{x}(t) = A x(t) + B u(t), \qquad y(t) = C x(t) + D u(t)
 $$
@@ -107,7 +107,7 @@ state transition matrix : $$ e^{At} = \sum_{k=0}^{\infty} \frac{(At)^k}{k!}$$
 
 ---
 
-### 2. 상태천이행렬 (State Transition Matrix)
+### 2-2. 상태천이행렬 (State Transition Matrix)
 
 $$
 e^{At} = \sum_{k=0}^{\infty} \frac{(At)^k}{k!}
@@ -125,7 +125,7 @@ $$
 
 ---
 
-### 3. 입력 포함 해
+### 2-3. 입력 포함 해
 $$
 x(t)=e^{At}x(0) + \int_0^t e^{A(t-\tau)}Bu(\tau)\,d\tau
 $$
@@ -141,7 +141,7 @@ $$
 
 ---
 
-### 4. 전달함수 관점
+### 2-4. 전달함수 관점
 $$
 G(s)=C(sI-A)^{-1}B+D
 $$
@@ -152,7 +152,7 @@ $$
 
 ---
 
-### 5. 2×2 예제
+### 2-5. 2×2 예제
 $$
 A=\begin{bmatrix}-1&0\\0&-2\end{bmatrix},\quad
 B=\begin{bmatrix}1\\1\end{bmatrix},\quad
@@ -171,7 +171,8 @@ $$
   - $D=2$: $\; y(t)=\tfrac{7}{2}-e^{-t}-\tfrac{1}{2}e^{-2t}, \;\; y(0^+)=2$
 
 
-## 6. 행렬 지수의 테일러 전개
+### 2-6. 행렬 지수의 테일러 전개  
+
 $$
 e^{At} = \sum_{k=0}^{\infty} \frac{(At)^k}{k!}
 $$
@@ -185,7 +186,7 @@ e^{z} = \sum_{k=0}^{\infty} \frac{z^k}{k!} \qquad z \in \mathbb{C}
 $$
 
 
-## 관련 과목
+### 관련 과목
 이 내용은 보통 다음 수업에서 다룸:
 - **신호 및 시스템 (Signals and Systems)**  
 - **선형제어 / 현대제어 (Linear Control, Modern Control Theory)**  
@@ -204,7 +205,7 @@ $$
 
 이하 Theorem
 
-### 안정성 정리 (Theorems)
+### 3-1안정성 정리 (Theorems)
 ---
 
 - **Marginally stable**:  
@@ -254,7 +255,7 @@ $$
 <br>
 <br>
 
-# Controllability
+# 4. Controllability
 선형 시스템 $ \dot{x} = Ax+Bu$  에서, 어떠한 초기값 $x(0)$ 과 어떠한 최종상태 $x_1$ 에 대해 유한한 시간 $t$ 에서 $x(0)$ 를 $x_1$으로 천이(transfer)시켜줄수 있을때, (A,B) 는 제어 가능하다고 말할 수 있다. 
 
 지피티 says.
@@ -268,7 +269,7 @@ $$
 + 반대로 controllable 하지 않다면, 아무리 입력을 바꿔도 도달할 수 없는 상태들이 존재한다는 말. 
 
 
-### Controllability: Equivalent Conditions/ 동치조건 (Continuous-Time LTI)
+### 4-1. Controllability: Equivalent Conditions/ 동치조건 (Continuous-Time LTI)
 
 Consider
 $$
@@ -323,9 +324,9 @@ $$
 <br>
 
 
-# Observability
+# 5. Observability
 
-### 1. 가관측성 (Observability)의 정의
+### 5-1. 가관측성 (Observability)의 정의
 ---
 
 연속시간 선형시스템
@@ -351,7 +352,7 @@ $$
 - 제어가능성과 가관측성은 서로 **쌍대(dual)** 관계에 있다.
 
 
-### 2. 가관측성 (Observability) 판별 조건
+### 5-2. 가관측성 (Observability) 판별 조건
 --- 
 
 연속시간 선형시스템:
@@ -363,7 +364,7 @@ $$
 
 ---
 
-#### 1. 관측가능성 행렬 (Observability matrix)
+#### 5-2-1. 관측가능성 행렬 (Observability matrix)
 $$
 \mathcal{O} =
 \begin{bmatrix}
@@ -379,7 +380,7 @@ $$
 
 ---
 
-#### 2. 관측가능성 그라미안 (Observability Gramian)
+#### 5-2-2. 관측가능성 그라미안 (Observability Gramian)
 $$
 W_o(t) = \int_0^t e^{A^\top \tau} C^\top C \, e^{A \tau}\, d\tau
 $$
@@ -387,7 +388,7 @@ $$
 
 ---
 
-#### 3. PBH 테스트 (Popov–Belevitch–Hautus test)
+#### 5-2-3. PBH 테스트 (Popov–Belevitch–Hautus test)
 모든 $A$의 고유값 $\lambda$에 대해,
 $$
 \operatorname{rank}
@@ -400,7 +401,7 @@ $$
 
 ---
 
-#### 4. 리아푸노프 방정식 (Lyapunov equation)
+#### 5-2-4. 리아푸노프 방정식 (Lyapunov equation)
 $A$가 Hurwitz 행렬(모든 고유값의 실수부 < 0)일 경우,
 $$
 A^\top W_o + W_o A = -C^\top C
@@ -409,7 +410,7 @@ $$
 
 ---
 
-## 요약
+### 요약
 - **제어가능성**: 입력으로 상태를 원하는 곳으로 이동시킬 수 있음  
 - **가관측성**: 출력으로부터 내부 상태를 알아낼 수 있음  
 - 두 성질은 서로 **쌍대(dual)** 관계에 있다.
@@ -418,8 +419,7 @@ $$
 <br>
 <br>
 
-# Stabilizability and Detectability (안정화 가능성과 검출 가능성)
-
+# 6. Stabilizability and Detectability (안정화 가능성과 검출 가능성)
 
 
 - **원문:**  
@@ -461,7 +461,7 @@ $$
 
 ---
 
-## 요약
+### 요약
 - **제어가능성 ⇒ 안정화가능성** (항상 성립)  
 - **가관측성 ⇒ 검출가능성** (항상 성립)  
 - 반대 방향은 일반적으로 성립하지 않음.  
@@ -523,14 +523,14 @@ $$
 
 ---
 
-# 2차 시스템 예제
+## 2차 시스템 예제
 
 다음 시스템을 고려하자:
 $$
 A = \begin{bmatrix}0 & 1 \\ -2 & -3 \end{bmatrix}
 $$
 
-## 1) 고유값 계산
+### 1) 고유값 계산
 특성방정식:
 $$
 \det(A - \lambda I) = \lambda^2 + 3\lambda + 2 = 0
@@ -544,7 +544,7 @@ $$
 
 ---
 
-## 2) 고유벡터 계산
+### 2) 고유벡터 계산
 - $\lambda_1 = -1$에 대한 고유벡터:
 $$
 (A + I)v = 0 \;\;\Rightarrow\;\; v_1 = \begin{bmatrix}1 \\ -1\end{bmatrix}
@@ -557,7 +557,7 @@ $$
 
 ---
 
-## 3) 해 표현
+### 3) 해 표현
 따라서 상태해는   
 
 $$
@@ -569,7 +569,7 @@ $$
 
 ---
 
-## 4) 해석
+### 4) 해석
 - 모드 1: $e^{-t}$ → 느리게 감쇠하는 성분  
 - 모드 2: $e^{-2t}$ → 더 빠르게 감쇠하는 성분  
 - 따라서 전체 시스템은 두 감쇠 모드의 조합으로 움직이며, 시간이 지나면 $x(t)\to 0$으로 수렴한다.
@@ -581,7 +581,7 @@ $$
 
 ## 제어 불가능 모드 예시
 
-## 예제 1) 제어 불가능 + 안정화 불가 (λ=0 모드가 제어 불가능)
+### 예제 1) 제어 불가능 + 안정화 불가 (λ=0 모드가 제어 불가능)
 
 시스템
 $$
@@ -589,7 +589,7 @@ A=\begin{bmatrix}0&0\\0&-1\end{bmatrix},\quad
 B=\begin{bmatrix}0\\1\end{bmatrix}.
 $$
 
-### 1) 제어가능성 행렬(Controllability matrix)
+#### 1) 제어가능성 행렬(Controllability matrix)
 $$
 \mathcal{C}=[\,B\;\;AB\,]
 =\begin{bmatrix}
@@ -600,7 +600,7 @@ $$
 $$
 ⇒ **제어 불가능**.
 
-### 2) PBH 테스트
+#### 2) PBH 테스트
 - 고유값: $\lambda_1=0,\;\lambda_2=-1$
 
 $\lambda=0$에 대해
@@ -629,7 +629,7 @@ $$
 \Rightarrow \text{($\lambda=-1$ 모드 제어 가능)}.
 $$
 
-### 3) 해석
+#### 3) 해석
 상태방정식은
 $$
 \dot{x}_1=0,\qquad \dot{x}_2=-x_2+u.
@@ -643,7 +643,7 @@ $$
 
 ---
 
-## 예제 2) 제어 불가능 + 안정화 가능 (제어 불가능 모드가 엄격 안정)
+### 예제 2) 제어 불가능 + 안정화 가능 (제어 불가능 모드가 엄격 안정)
 
 시스템
 $$
@@ -651,7 +651,7 @@ A=\begin{bmatrix}-2&0\\0&-1\end{bmatrix},\quad
 B=\begin{bmatrix}0\\1\end{bmatrix}.
 $$
 
-### 1) 제어가능성 행렬
+#### 1) 제어가능성 행렬
 $$
 \mathcal{C}=[\,B\;\;AB\,]
 =\begin{bmatrix}
@@ -662,7 +662,7 @@ $$
 $$
 ⇒ **제어 불가능**.
 
-### 2) PBH 테스트
+#### 2) PBH 테스트
 - 고유값: $\lambda_1=-2,\;\lambda_2=-1$
 
 $\lambda=-2$에 대해
@@ -690,7 +690,7 @@ $$
 \Rightarrow \text{($\lambda=-1$ 모드 제어 가능)}.
 $$
 
-### 3) 해석
+#### 3) 해석
 $$
 \dot{x}_1=-2x_1,\qquad \dot{x}_2=-x_2+u.
 $$
@@ -703,7 +703,7 @@ $$
 
 ---
 
-## 핵심 요약
+### 핵심 요약
 - **제어 불가능 모드**: 어떤 고유값 방향이 입력 $B$로는 전혀 자극될 수 없는 경우  
   - 판별: $\operatorname{rank}[A-\lambda I\;\;B]<n$ (PBH), 또는 $\operatorname{rank}(\mathcal{C})<n$.  
 - **Stabilizability**: 제어 불가능 모드가 존재해도 **그 모드들이 모두 Re($\lambda$)<0**이면 OK.  
