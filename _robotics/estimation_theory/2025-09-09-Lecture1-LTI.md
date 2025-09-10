@@ -29,7 +29,7 @@ tags:
 수학적인 기초를 한번 훑어 지나가보자. 
 
 
-# 1. Matrix
+# 1. Matrix  
 
 행렬 연산은 늘 볼때마다 헷갈린다. 주요 연산 공식을 다시 정리해보자. 
 
@@ -58,12 +58,13 @@ $$
 <br>
 <br>
 
-# 2. Linear system
+# 2. Linear system  
+
 
 현재 강의에서는 선형시스템을 기본으로 한다. 
 기본적으로 선형시스템은 아래와 같이 정의한다. 
 
-### 2-1. 선형 시스템의 일반 형태
+ ### 2-1. 선형 시스템의 일반 형태
 $$
 \dot{x}(t) = A x(t) + B u(t), \qquad y(t) = C x(t) + D u(t)
 $$
@@ -85,11 +86,11 @@ $$\begin{aligned}
 어라. D는 없네. 좀 더 찾아보니 이런 의미가 있다고 한다. 맞나? 
 
 
-> ## D = 0
-> 입력이 출력으로 즉시 전달되지 않는다.   
-> $y(t) = Cx(t) + D u(t)$ 인데, $D$ 가 0이므로, Proper system 또는 Strictly proper system이라고 한다.   
-> + Proper : 전달함수의 분자가 분모보다 차수가 크지 않은 경우 
-> + Strictly proper system : 전달함수의 분자가 분모보다 반드시 낮은 찾수일때. 
+> Why? D = 0  
+>> 입력이 출력으로 즉시 전달되지 않는다.   
+>> $y(t) = Cx(t) + D u(t)$ 인데, $D$ 가 0이므로, Proper system 또는 Strictly proper system이라고 한다.   
+>> + Proper : 전달함수의 분자가 분모보다 차수가 크지 않은 경우 
+>> + Strictly proper system : 전달함수의 분자가 분모보다 반드시 낮은 찾수일때. 
 
 이때 이 시스템의 해는 다음과 같다. 
 
@@ -107,7 +108,7 @@ state transition matrix : $$ e^{At} = \sum_{k=0}^{\infty} \frac{(At)^k}{k!}$$
 
 ---
 
-### 2-2. 상태천이행렬 (State Transition Matrix)
+ ### 2-2. 상태천이행렬 (State Transition Matrix)
 
 $$
 e^{At} = \sum_{k=0}^{\infty} \frac{(At)^k}{k!}
@@ -125,7 +126,7 @@ $$
 
 ---
 
-### 2-3. 입력 포함 해
+ ### 2-3. 입력 포함 해
 $$
 x(t)=e^{At}x(0) + \int_0^t e^{A(t-\tau)}Bu(\tau)\,d\tau
 $$
