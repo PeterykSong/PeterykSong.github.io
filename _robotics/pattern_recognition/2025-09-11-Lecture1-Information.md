@@ -337,7 +337,7 @@ D_{P(X \mid Y=0)\,\|\,P(X \mid Y=1)} = \sum_x P(X = x \mid Y=0) \log \frac{P(X =
 $$
 
 $$
- = \frac{1}{3} \log \frac{{\frac{1}{3}}}{\frac{n}{60}} + \frac{2}{3} \log \frac{{\frac{2}{3}}}{\frac{60-n}{60}}
+ = \frac{1}{3} \log \frac{\frac{1}{3}}{\frac{n}{60}} + \frac{2}{3} \log \frac{{\frac{2}{3}}}{\frac{60-n}{60}}
 $$
 이때 위 식을 미분하여 0인 지점을 찾으면 argmin 값이다. .....와....... 그렇게  푸는거네. 
 
