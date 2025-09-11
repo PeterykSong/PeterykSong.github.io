@@ -180,10 +180,10 @@ tags:
   $$
 
 
-    <div style="text-align: center;">
-     <img src="/assets/images/robotics/MutualInformation.png" alt="상호정보량">
-     <figcaption>상호정보량 I 를 나타내는 벤다이어그램 <br> <br> </figcaption>
-    </div>
+<div style="text-align: center;">
+  <img src="/assets/images/robotics/MutualInformation.png" alt="상호정보량">
+  <figcaption>상호정보량 I 를 나타내는 벤다이어그램 <br> <br> </figcaption>
+</div>
     
  Mutual information이 왜 KL Divergence의 형태로 설명되는가에 대해 알아보기 위해 Conditional Entropy를 먼저 알아봐야 한다. 
 
@@ -233,20 +233,20 @@ $$
 ### Mutual Information 기본 정의
     Mutual Information : Output Y의 관측에 의해 알수 있는 X의 Uncertainty(정보)
 
-  $$
-  I(X;Y) = H(X) - H(X\mid Y)
-  $$
+$$
+I(X;Y) = H(X) - H(X\mid Y)
+$$
 
 ### 엔트로피 전개
     체인 룰을 사용하면:
-  $$
-  I(X;Y) = H(X) + H(Y) - H(X,Y)
-  $$
+$$
+I(X;Y) = H(X) + H(Y) - H(X,Y)
+$$
 
-      각 엔트로피를 풀어쓰면:
-  - $H(X) = -\sum_x p(x)\log p(x)$  
-  - $H(Y) = -\sum_y p(y)\log p(y)$  
-  - $H(X,Y) = -\sum_x \sum_y p(x,y)\log p(x,y)$   
+  각 엔트로피를 풀어쓰면:
+- $H(X) = -\sum_x p(x)\log p(x)$  
+- $H(Y) = -\sum_y p(y)\log p(y)$  
+- $H(X,Y) = -\sum_x \sum_y p(x,y)\log p(x,y)$   
 
 
 이걸 이제 이어서 전개해보면 다음과 같다. 
