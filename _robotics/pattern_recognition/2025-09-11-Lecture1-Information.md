@@ -31,12 +31,11 @@ tags:
   7. Variational Inference
   8. Deep Generative model
 
-  강의의 범위가 좀 넓은데. 일단 패턴인식론을 어디서부터 어디까지 배우는지 좀 두고 봐야 할듯하다. 
+강의의 범위가 좀 넓은데. 일단 패턴인식론을 어디서부터 어디까지 배우는지 좀 두고 봐야 할듯하다. 
 
+# 1. Information
 
-  # 1. Information
-
-  ## 1.1 정보의 정의
+## 1.1 정보의 정의
 
    정보(Information)를 어떻게 정의할 것인가. 이것이 첫번째 질문이다.   
 
@@ -128,9 +127,9 @@ tags:
      - KL divergence = 실제 분포 $p$를 따르는 데이터를 $q$라고 **잘못 가정했을 때 추가로 드는 정보 비용**. 따라서 **모델링, 통신, 머신러닝**에서 두 분포가 얼마나 다른지 평가하는 척도로 널리 사용된다.  
 
 
-## 2. 1. KL Divergence 예시
+## 2.1 KL Divergence 예시
 
-#### 조건
+### 조건
   - 실제 분포:  
     $ p = (0.5, \; 0.5) $
   - 참조 분포:  
@@ -139,7 +138,7 @@ tags:
 
 
 
-#### KL Divergence 계산
+### KL Divergence 계산
   $$
   \begin{aligned}
   D_{p \parallel q} &= \sum_i p_i \log_2 \frac{p_i}{q_i}  \\
@@ -152,7 +151,7 @@ tags:
   D_{p \parallel q} \approx 0.737 \; \text{bits}
   $$
 
-#### 해석
+### 해석
   - 실제 분포는 균등분포지만, 이를 $q=(0.9,0.1)$라 잘못 가정하면  
     평균적으로 약 **0.737 비트의 추가 정보 비용**이 필요하다.  
   - KL divergence가 0보다 크므로 두 분포는 서로 다르다.  
@@ -188,7 +187,7 @@ tags:
     
  Mutual information이 왜 KL Divergence의 형태로 설명되는가에 대해 알아보기 위해 Conditional Entropy를 먼저 알아봐야 한다. 
 
- ## 3. 1. Conditional Entropy (조건부 불확실성의 양)
+ ## 3.1 Conditional Entropy (조건부 불확실성의 양)
 
    이산 확률변수의 경우:
 
@@ -221,7 +220,7 @@ $$
     - $H(X\mid Y) = 0$: $X$가 $Y$의 함수일 때 (즉, $Y$가 $X$를 완전히 알려줌)  
     - $H(X\mid Y) = H(X)$: $X$와 $Y$가 독립일 때  
 
-  ## 3. 2. Joint Entropy (결합)
+  ## 3.2 Joint Entropy (결합)
 
   $$
   H(X,Y) =  -\sum_{x \in X} \sum_{y \in Y} p(x,y)\log p(x, y)  \\
@@ -229,7 +228,7 @@ $$
 
   $p(x,y)$: Joint probility mass funtion
   
-## 3.3. Mutual Information 의 수식 유도
+## 3.3 Mutual Information 의 수식 유도
 
 ### Mutual Information 기본 정의
     Mutual Information : Output Y의 관측에 의해 알수 있는 X의 Uncertainty(정보)
@@ -357,7 +356,7 @@ $$
 
 log항의 분자와 분모가 동일하므로, log 1. 즉 0값이다. 
 
-#### 4.5 Mutual information과 Conditional Entropy의 관계에 의해 H(X|Y를 구하라)
+### 4.5 Mutual information과 Conditional Entropy의 관계에 의해 H(X|Y를 구하라)
 
 
   $$
