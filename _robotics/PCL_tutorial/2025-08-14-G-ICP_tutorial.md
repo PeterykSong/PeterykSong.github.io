@@ -28,7 +28,7 @@ tags:
   Chatgpt의 가이드를 충실히 따라 보았다.   
   쓰고있는 노트북의 GPU가 MX450이어서 CUDA쪽 문제가 있었다. CUDA를 끄기로 하고 컴파일하니 문제없이 컴파일이 된다. 아마, CUDA버전과 Toolkit쪽 문제인듯 싶다. 이 부분은 추후 임베디드 보드 사용하면서 다시 보도록 하자. 
 
-### 1. 필수 패키지의 설치
+## 1. 필수 패키지의 설치
 
 ```bash
 sudo apt update
@@ -40,7 +40,7 @@ sudo apt install -y build-essential cmake git libeigen3-dev libomp-dev libpcl-de
 - libomp-dev → 멀티스레드 지원.
 - CUDA 사용 계획 있으면 드라이버와 CUDA Toolkit도 설치.
 
-### 2. Build
+## 2. Build
 
 #### CPU Only
 ```bash
@@ -61,7 +61,7 @@ make -j$(nproc)
 ```
 
 
-### 3. Binding python
+## 3. Binding python
 바인딩이라는 용어는 C++로 빌드된 소스를 python에서 사용할 수 있도록 해주는걸 말한다. 용어의 설명이 부적절하겠지만 지금은 일단 그렇게 알아두자. 
 
 ```bash

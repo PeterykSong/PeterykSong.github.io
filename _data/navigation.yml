@@ -35,8 +35,8 @@ main:
         url: /robotics/lidar/
       - title: "Estimation Theory"
         url: /robotics/estimation_theory/
-      - title: "Signal Processing"
-        url: /robotics/signalprocessing/
+      - title: "Pattern Recognition"
+        url: /robotics/pattern_recognition/
   - title: "Posts"
     url: /year-archive/
   - title: "Portfolio"
