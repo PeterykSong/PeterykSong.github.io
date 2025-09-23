@@ -166,11 +166,16 @@ single:25.4905[msec] 100times:2390.74[msec] 100times_reuse:1391.59[msec] fitness
 우선 임베디드 시스템으로 국한지어서, 여러 오픈된 알고리즘들을 임베디드 보드에서 실행시 정합이 얼마나 잘 되는가에 대한 통계를 내어보면, 3~4장짜리 보고서 논문정도는 가능하지 않을까 싶다. 천천히 한번 해보자. 
 
 우선, Replica 데이터셋을 사용해보기로 한다. 뭐 워낙에 유명한 데이터셋이니까. 되겠지. 
+코드는 각자의 환경에 맞춰 다운받아보자. 
 
 ```bash
 git clone https://github.com/facebookresearch/Replica-Dataset.git
 cd Replica-Dataset
-./download.sh ~/data/replica_v1
-
+./download.sh ~/data/replica
 ```
+
+<div style="text-align: center;">
+  <img src="/assets/images/robotics/replica_dataset.png" alt="폴더구조"> 
+  <figcaption>Replica 데이터셋 구조</figcaption>
+</div>
 
