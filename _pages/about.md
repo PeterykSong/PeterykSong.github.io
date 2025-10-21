@@ -22,11 +22,11 @@ I have a broad understanding that spans mechanical engineering, electronic circu
 
 
 ## Work Experiences
- - LG Electronics \| HS사업본부 (HS Division) \| 책임연구원 (Professional) \| 2010.2-Present
+ - LG Electronics \| HS사업본부 (HS Division) \| 책임연구원 (Professional) \| 2010.2-2025.10
 
 
 ## Educations / Publications
-
+- 2025.3 - Present \| Ph.D course in in Intelligent Robotics  at Sungkyunkwan University
 - 2008.3 - 2010.2 \| Master's Degree in Mechatronics Engineering at Sungkyunkwan University
 - 2002.3 - 2008.2 \| Bachelor's Degree in Mechanical Engineering at Sungkyunkwan University
 
