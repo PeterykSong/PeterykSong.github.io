@@ -37,11 +37,11 @@ tags:
 
 데이터있다고 가정해보자.  
 
-<!-- PyScript CSS / JS: 버전은 적당히 고정 (여기선 2025.10.3 예시) -->
-<link rel="stylesheet" href="https://pyscript.net/releases/2025.10.3/core.css">
-<script defer type="module" src="https://pyscript.net/releases/2025.10.3/core.js"></script>
+{% raw %}
+<!-- PyScript CSS / JS (문서에 나온 2024.1.1 버전 예시) -->
+<link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+<script defer type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
 
-<!-- 여기부터 PyScript 코드 -->
 <py-script>
 from pyscript import display
 import sys
