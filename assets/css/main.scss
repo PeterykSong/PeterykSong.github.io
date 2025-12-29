@@ -458,7 +458,7 @@ pre[class*="language-"] {
 code[class*="language-"],
 code {
   background: transparent !important;
-  color: #222 !important;
+  color: #111 !important;
 }
 
 /* 줄 번호가 있을 경우 */
@@ -469,14 +469,19 @@ pre.line-numbers {
 /* 일반 pre 블럭에도 동일한 배경/글자색 적용 */
 pre {
   background: #f4f4f4 !important;
-  color: #202020 !important;
+  color: #111 !important;
 }
 
 pre, code {
   font-family: "JetBrains Mono", "Fira Code", monospace;
 }
 
-.token.comment { color: #626263 !important; }
-.token.keyword { color: #005cc5 !important; }
-.token.string  { color: #22863a !important; }
-.token.comment { color: #b67600 !important; }
+.token.comment { color: #4b5563 !important; }
+.token.keyword { color: #0b4fbd !important; }
+.token.string  { color: #1b7f2a !important; }
+.token.number  { color: #b45309 !important; },
+.token.boolean,
+.token.builtin,
+.token.function,
+.token.class-name,
+.token.operator { color: #b45309 !important; }
