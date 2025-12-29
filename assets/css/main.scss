@@ -448,7 +448,7 @@ table {
 /* 코드 블럭 전체 배경 (블럭 영역) */
 pre[class*="language-"] {
   background: #f4f4f4 !important;   /* 옅은 회색 */
-  color: #111 !important;
+  color: black !important;
   border: 1px solid #ddd;
   border-radius: 6px;
   padding: 1rem;
@@ -474,6 +474,19 @@ pre {
 
 pre, code {
   font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* Rouge 하이라이트 래퍼가 색을 약하게 만드는 경우 대비 */
+.highlight,
+.highlight pre,
+.highlight code,
+.highlight span {
+  color: #111 !important;
+  opacity: 1 !important;
+}
+
+.highlight {
+  background: #f4f4f4 !important;
 }
 
 .token.comment { color: #4b5563 !important; }
