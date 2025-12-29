@@ -197,7 +197,7 @@ display(fig)
 우선, 두개의 데이터군은 다음과 같다. 
 Class0 은 -1,1을 평균으로 하여, 공분산값 cov0를 가지고, Class1 은 2,-0.5를 평균으로 공분산 cov1를 가진다. 
 
-```
+```python
 # 클래스 0: 왼쪽 위쪽
 mean0 = np.array([-1.0, 1.0])
 cov0  = np.array([[0.4, 0.2],
@@ -212,3 +212,48 @@ X1 = np.random.multivariate_normal(mean1, cov1, size=100)
 ```
 
 그럴때 PCA는 Class 0 + Class 1 이 가지는 전체 데이터 분포의 데이터 특성을 보여주고, LDA 는 Class0과 Class1과의 데이터를 구분하는 방향을 시각적으로 보여주고있다. 
+
+이제 PCA와 LDA의 정의와 특성에 대해 곰곰히 뜯어보자. 
+
+# PCA 
+
+> PCA는 고차원 데이터의 분산을 가장 잘 보존하는 방향을 찾아,       
+> 저차원 공간으로 선형투영하는 차원 축소기법이다. 
+
+우선, 앞서 그래프에서 PCA 벡터를 그리는 코드를 가져와보자. 
+
+
+```python
+
+mean = X.mean(axis=0)
+X_centered = X - mean
+cov = np.cov(X_centered.T)        # (2,2)
+
+eigvals, eigvecs = np.linalg.eigh(cov)  # 작은 고유값부터
+order = np.argsort(eigvals)[::-1]       # 내림차순 정렬
+eigvals = eigvals[order]
+eigvecs = eigvecs[:, order]
+
+pc1 = eigvecs[:, 0]
+pc2 = eigvecs[:, 1]
+
+max_components = min(6, eigvals.shape[0])  # 최대 6개까지, 차원 수를 넘지 않게
+
+lines = ["PCA Eigenvalues & Eigenvectors:"]
+for i in range(max_components):
+    vec = eigvecs[:, i]
+    lines.append(
+        f"PC{i+1}: eigenvalue = {eigvals[i]:.4f}, "
+        f"vector = [{vec[0]:.4f}, {vec[1]:.4f}]"
+    )
+
+display("\n".join(lines))
+
+```
+
+코드에서 쉽게 보면, 데이터에서 PCA 분해는 Eigen-vector, 즉 고유값임을 알수 있다. -> eigvecs[:,order]
+여기서 데이터는 2차원이므로 고유값이 2개이지만, 만약 차원이 늘어난다면 고유값은 차원의 개수많큼 존재한다. 
+
+
+
+## 

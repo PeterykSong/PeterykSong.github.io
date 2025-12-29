@@ -445,11 +445,31 @@ table {
 
 //코드블럭 배경색
 
+/* 코드 블럭 전체 배경 (블럭 영역) */
 pre[class*="language-"] {
-  background: #fbfbfb !important;
-  border: 1px solid #6b6b6b3a;
+  background: #f4f4f4 !important;   /* 옅은 회색 */
+  color: #222 !important;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
 }
 
-code[class*="language-"] {
-  background: transparent !important;
+/* 인라인 코드 */
+code[class*="language-"],
+code {
+  background: #f0f0f0 !important;
+  color: #222 !important;
 }
+
+/* 줄 번호가 있을 경우 */
+pre.line-numbers {
+  background: #f4f4f4 !important;
+}
+
+pre, code {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+
+.token.comment { color: #6a737d !important; }
+.token.keyword { color: #005cc5 !important; }
+.token.string  { color: #22863a !important; }
