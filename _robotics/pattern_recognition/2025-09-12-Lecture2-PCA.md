@@ -88,6 +88,19 @@ eigvecs = eigvecs[:, order]
 pc1 = eigvecs[:, 0]
 pc2 = eigvecs[:, 1]
 
+max_components = min(6, eigvals.shape[0])  # 최대 6개까지, 차원 수를 넘지 않게
+
+lines = ["PCA Eigenvalues & Eigenvectors:"]
+for i in range(max_components):
+    vec = eigvecs[:, i]
+    lines.append(
+        f"PC{i+1}: eigenvalue = {eigvals[i]:.4f}, "
+        f"vector = [{vec[0]:.4f}, {vec[1]:.4f}]"
+    )
+
+display("\n".join(lines))
+
+
 # -------------------------
 # 3. LDA 계산 (2 클래스 Fisher LDA)
 # -------------------------
