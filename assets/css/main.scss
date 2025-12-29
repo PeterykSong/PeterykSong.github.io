@@ -457,13 +457,19 @@ pre[class*="language-"] {
 /* 인라인 코드 */
 code[class*="language-"],
 code {
-  background: #f0f0f0 !important;
+  background: transparent !important;
   color: #222 !important;
 }
 
 /* 줄 번호가 있을 경우 */
 pre.line-numbers {
   background: #f4f4f4 !important;
+}
+
+/* 일반 pre 블럭에도 동일한 배경/글자색 적용 */
+pre {
+  background: #f4f4f4 !important;
+  color: #222 !important;
 }
 
 pre, code {
