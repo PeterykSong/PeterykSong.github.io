@@ -479,8 +479,7 @@ pre, code {
 /* Rouge 하이라이트 래퍼가 색을 약하게 만드는 경우 대비 */
 .highlight,
 .highlight pre,
-.highlight code,
-.highlight span {
+.highlight code {
   color: #111 !important;
   opacity: 1 !important;
 }
