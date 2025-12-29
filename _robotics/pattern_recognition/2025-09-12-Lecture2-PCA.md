@@ -279,15 +279,16 @@ $$
 a_k = e^T(x_k - m)
 $$
 
-3. Scatter Matrix
-산포 행렬
+3. Scatter Matrix  
+산포 행렬  
 
 $$
 S = \sum_{k=1}^{n} (x_k - m)(x_k - m)^T
 $$
+
 공분산 행렬과 같은 형태 (스케일만 다름)
 
-4. PCA 최적화 문제 → 고유값 문제
+4. PCA 최적화 문제 → 고유값 문제  
 분산을 최대로 하는 방향 \(e\) 를 찾는 문제
 
 $$
@@ -300,8 +301,8 @@ $$
 S e = \lambda e
 $$
 
-5. 주성분(Principal Components)
-가장 큰 고유값에 대응하는 고유벡터가 1st PC
+5. 주성분(Principal Components)  
+가장 큰 고유값에 대응하는 고유벡터가 1st PC  
 
 $$
 e_1, e_2, \dots, e_d
