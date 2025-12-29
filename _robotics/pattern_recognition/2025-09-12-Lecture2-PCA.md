@@ -128,6 +128,32 @@ fig, ax = plt.subplots(figsize=(5,5))
 ax.scatter(X0[:,0], X0[:,1], alpha=0.5, label="class 0")
 ax.scatter(X1[:,0], X1[:,1], alpha=0.5, label="class 1")
 
+# class 0 mean (m0)
+ax.scatter(m0[0], m0[1],
+           s=120, c="orange", marker="X",
+           edgecolors="black", linewidths=1.2,
+           label="mean m0")
+
+ax.text(m0[0]+0.1, m0[1]+0.1,
+        "m0", color="orange")
+
+# class 1 mean (m1)
+ax.scatter(m1[0], m1[1],
+           s=120, c="purple", marker="X",
+           edgecolors="black", linewidths=1.2,
+           label="mean m1")
+
+ax.text(m1[0]+0.1, m1[1]+0.1,
+        "m1", color="purple")
+
+# 전체 평균 (global mean)
+ax.scatter(mean[0], mean[1],
+           s=140, c="red", marker="D",
+           edgecolors="black", linewidths=1.2,
+           label="global mean")
+
+ax.text(mean[0]+0.1, mean[1]+0.1,
+        "global mean", color="red")
 # PCA 화살표 (PC1, PC2)
 cx, cy = mean
 scale_pca = 3.0
@@ -163,3 +189,4 @@ ax.legend()
 display(fig)
 </py-script>
 {% endraw %}
+
