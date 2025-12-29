@@ -190,3 +190,25 @@ display(fig)
 </py-script>
 {% endraw %}
 
+# PCA와 LDA의 목적
+
+우선 위의 그래프는 아래의 코드를 통해 작성되었다. 
+
+우선, 두개의 데이터군은 다음과 같다. 
+Class0 은 -1,1을 평균으로 하여, 공분산값 cov0를 가지고, Class1 은 2,-0.5를 평균으로 공분산 cov1를 가진다. 
+
+```
+# 클래스 0: 왼쪽 위쪽
+mean0 = np.array([-1.0, 1.0])
+cov0  = np.array([[0.4, 0.2],
+                  [0.2, 0.3]])
+X0 = np.random.multivariate_normal(mean0, cov0, size=100)
+
+# 클래스 1: 오른쪽 아래쪽
+mean1 = np.array([2.0, -0.5])
+cov1  = np.array([[0.3, -0.1],
+                  [-0.1, 0.2]])
+X1 = np.random.multivariate_normal(mean1, cov1, size=100)
+```
+
+그럴때 PCA는 Class 0 + Class 1 이 가지는 전체 데이터 분포의 데이터 특성을 보여주고, LDA 는 Class0과 Class1과의 데이터를 구분하는 방향을 시각적으로 보여주고있다. 
