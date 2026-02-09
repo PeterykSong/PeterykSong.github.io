@@ -7,6 +7,7 @@ header:
 gallery:
   - url: /assets/images/portfolio/LG_B9.png
     image_path: /assets/images/portfolio/LG_B9.png
+related: false
 ---
 
 # LG B9 상업용 로봇청소기 (2017. 5 ~ 2021. 12.)

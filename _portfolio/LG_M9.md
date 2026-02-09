@@ -7,6 +7,7 @@ header:
 gallery:
   - url: /assets/images/portfolio/LG_M9.png
     image_path: /assets/images/portfolio/LG_M9.png
+related: false
 ---
 
 #	가정용 습식 로봇청소기 선행연구 (2016.01 ~ 2017.02)
