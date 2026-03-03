@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Hardware"
-permalink: /robotics/Hardware/
+permalink: /robotics/hardware/
 ---
 
 {% assign robotics_items = site.robotics | where: "tags", "Hardware" | sort: 'date' | reverse %}

@@ -37,6 +37,8 @@ main:
         url: /robotics/estimation_theory/
       - title: "Pattern Recognition"
         url: /robotics/pattern_recognition/
+      - title: "Hardware"
+        url: /robotics/hardware/
   - title: "Posts"
     url: /year-archive/
   - title: "Portfolio"
