@@ -591,3 +591,29 @@ pre, code {
 .highlighter-rouge .highlight .nx,
 .highlighter-rouge .highlight .o,
 .highlighter-rouge .highlight .p { color: #111 !important; }
+
+//
+// 포스트 본문 내 figure/img/caption 레이아웃 재정의
+//
+// 기본 테마 스타일에서 캡션이 옆으로 붙는 경우가 있어,
+// 이미지는 가운데 정렬하고 캡션은 이미지 아래에 표시되도록 고정합니다.
+//
+.page__content,
+.archive__item-excerpt {
+  figure {
+    display: block;
+    margin: 1.5em auto;
+    text-align: center;
+  }
+
+  figure > img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  figure > figcaption {
+    display: block;
+    margin-top: 0.75em;
+    text-align: center;
+  }
+}
