@@ -2,6 +2,7 @@
 layout: archive
 title: "SLAM"
 permalink: /robotics/slam/
+is_post: false
 ---
 
 {% assign robotics_items = site.robotics | where: "tags", "SLAM" | sort: 'date' | reverse %}

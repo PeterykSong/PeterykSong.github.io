@@ -2,6 +2,7 @@
 layout: archive
 title: "LiDAR"
 permalink: /robotics/lidar/
+is_post: false
 ---
 
 {% assign robotics_items = site.robotics | where: "tags", "LiDAR" | sort: 'date' | reverse %}

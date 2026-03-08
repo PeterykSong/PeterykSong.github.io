@@ -2,6 +2,7 @@
 layout: archive
 title: "ICP"
 permalink: /robotics/icp/
+is_post: false
 ---
 
 {% assign robotics_items = site.robotics | where: "tags", "ICP" | sort: 'date' | reverse %}

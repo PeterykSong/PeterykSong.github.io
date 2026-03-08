@@ -2,6 +2,7 @@
 layout: archive
 title: "Estimation Theory"
 permalink: /robotics/estimation_theory/
+is_post: false
 ---
 
 {% assign all_items = site.robotics | where_exp: "item", "item.path contains 'estimation_theory/'" | where: "tags", "EstimationTheory" | sort: 'date' | reverse %}

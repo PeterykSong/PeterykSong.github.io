@@ -9,7 +9,9 @@ excerpt: "Day 1"
 tags:
   - EstimationTheory
   - Robotics
-  
+
+is_post: True
+
 ---
 
 학교 수업 복습 칸입니다. 
