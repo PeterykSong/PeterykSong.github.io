@@ -618,3 +618,9 @@ pre, code {
     text-align: center;
   }
 }
+
+.page__content img {
+  max-width: none !important;
+  width: auto !important;
+  height: auto !important;
+}
