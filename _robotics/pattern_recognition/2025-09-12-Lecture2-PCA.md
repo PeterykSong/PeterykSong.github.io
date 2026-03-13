@@ -6,6 +6,7 @@ title: "Lecture 2 PCA"
 date: 2025-12-29 00:00:00 +0900
 #last_modified_at: 2021-11-15 14:39:23 +0900
 related: false
+topic : pattern_recognition
 
 excerpt: "Day 2"
 tags:

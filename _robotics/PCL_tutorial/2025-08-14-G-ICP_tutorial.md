@@ -5,6 +5,8 @@ title: "fast G-ICP tutorial."
 date: 2025-08-14 21:00:00 +0900
 #last_modified_at: 2021-11-15 14:39:23 +0900
 is_post: True
+topic : icp
+related: false
 excerpt: "Fast G-ICP tutorial"
 tags:
   - SLAM

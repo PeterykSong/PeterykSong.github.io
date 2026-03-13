@@ -7,7 +7,8 @@ date: 2026-03-08 00:00:00 +0900
 #last_modified_at: 2021-11-15 14:39:23 +0900
 related: false
 is_post: True
-excerpt: "Day 2"
+topic: hardware
+
 tags:
   - Robotics
   - KiCAD

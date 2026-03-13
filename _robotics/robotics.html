@@ -4,7 +4,7 @@ title: "Robotics"
 permalink: /robotics/
 ---
 
-<h3>Topics</h3>
+<h3>Topics List</h3>
 <ul>
   <li><a href="/robotics/slam/">SLAM</a></li>
   <li><a href="/robotics/icp/">ICP</a></li>
@@ -15,12 +15,53 @@ permalink: /robotics/
 
 </ul>
 
-<h3>Latest</h3>
-{% assign robotics_posts = site.robotics | where_exp: "post", "post.is_topic != true" | sort: "date" | reverse %}
+<h3>Topics</h3>
+
+<h4><a href="/robotics/slam/">SLAM</a></h4>
+{% assign topic_posts = site.robotics | where_exp: "post", "post.is_topic != true and post.topic == 'slam'" | sort: "date" | reverse %}
 <ul>
-  {% for post in robotics_posts limit:10 %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>{% if post.date %} <span>{{ post.date | date: site.date_format }}</span>{% endif %}
-    </li>
+  {% for post in topic_posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<h4><a href="/robotics/icp/">ICP</a></h4>
+{% assign topic_posts = site.robotics | where_exp: "post", "post.is_topic != true and post.topic == 'icp'" | sort: "date" | reverse %}
+<ul>
+  {% for post in topic_posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<h4><a href="/robotics/lidar/">LiDAR</a></h4>
+{% assign topic_posts = site.robotics | where_exp: "post", "post.is_topic != true and post.topic == 'lidar'" | sort: "date" | reverse %}
+<ul>
+  {% for post in topic_posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<h4><a href="/robotics/estimation_theory/">Estimation Theory</a></h4>
+{% assign topic_posts = site.robotics | where_exp: "post", "post.is_topic != true and post.topic == 'estimation_theory'" | sort: "date" | reverse %}
+<ul>
+  {% for post in topic_posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<h4><a href="/robotics/pattern_recognition/">Pattern Recognition</a></h4>
+{% assign topic_posts = site.robotics | where_exp: "post", "post.is_topic != true and post.topic == 'icp'" | sort: "date" | reverse %}
+<ul>
+  {% for post in topic_posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+
+
+<h4><a href="/robotics/hardware/">Hardware</a></h4>
+{% assign topic_posts = site.robotics | where_exp: "post", "post.is_topic != true and post.topic == 'icp'" | sort: "date" | reverse %}
+<ul>
+  {% for post in topic_posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>

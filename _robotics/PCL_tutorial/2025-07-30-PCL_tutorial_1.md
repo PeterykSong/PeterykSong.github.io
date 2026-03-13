@@ -5,6 +5,8 @@ title: "PCL_Tutorial (작성중)"
 date: 2025-07-30 21:00:00 +0900
 #last_modified_at: 2021-11-15 14:39:23 +0900
 is_post: True
+topic : icp
+related: false
 excerpt: "PCL Tutorial "
 tags:
   - SLAM

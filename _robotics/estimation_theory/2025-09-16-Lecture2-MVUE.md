@@ -11,6 +11,8 @@ tags:
   - Robotics
 
 is_post: True
+topic : estimation_theory
+related : false
 ---
 
 학교 수업 복습 칸입니다. 

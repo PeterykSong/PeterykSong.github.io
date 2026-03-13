@@ -4,6 +4,7 @@ layout: single
 title: "Lecture 1-1 Information"
 date: 2025-09-09 00:00:00 +0900
 #last_modified_at: 2021-11-15 14:39:23 +0900
+topic : pattern_recognition
 
 excerpt: "Day 1"
 tags:
