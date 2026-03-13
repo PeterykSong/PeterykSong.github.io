@@ -12,7 +12,6 @@ permalink: /robotics/
   <li><a href="/robotics/estimation_theory/">Estimation Theory</a></li>
   <li><a href="/robotics/pattern_recognition/">Pattern Recognition</a></li>
   <li><a href="/robotics/hardware/">Hardware</a></li>
-
 </ul>
 
 <h3>Topics</h3>
@@ -50,16 +49,15 @@ permalink: /robotics/
 </ul>
 
 <h4><a href="/robotics/pattern_recognition/">Pattern Recognition</a></h4>
-{% assign topic_posts = site.robotics | where_exp: "post", "post.is_topic != true and post.topic == 'icp'" | sort: "date" | reverse %}
+{% assign topic_posts = site.robotics | where_exp: "post", "post.is_topic != true and post.topic == 'pattern_recognition'" | sort: "date" | reverse %}
 <ul>
   {% for post in topic_posts %}
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
 
-
 <h4><a href="/robotics/hardware/">Hardware</a></h4>
-{% assign topic_posts = site.robotics | where_exp: "post", "post.is_topic != true and post.topic == 'icp'" | sort: "date" | reverse %}
+{% assign topic_posts = site.robotics | where_exp: "post", "post.is_topic != true and post.topic == 'hardware'" | sort: "date" | reverse %}
 <ul>
   {% for post in topic_posts %}
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
