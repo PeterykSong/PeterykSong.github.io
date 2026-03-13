@@ -18,7 +18,7 @@ tags:
   - Weekly  
 ---
 
-New Year's Resolution. maybe for 3 day.   
+New Semester
 {: .notice}
 
 
@@ -55,5 +55,5 @@ New Year's Resolution. maybe for 3 day.
   모르는 것들을 헤쳐나가고 있는데, 생각보다 물어볼 만한 곳이 잘 없다.
   깊게 해본 사람이 없다는 느낌인데, 말을 안해주는 것인지 정말 모르는 것인지......
   결국은 ChatGPT에 의존할 수밖에 없다는게 다시금 아쉽다. 
-  
+
   

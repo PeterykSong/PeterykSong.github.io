@@ -140,7 +140,7 @@ plt.show()
 데이터셋의 Embedding Space를 보면 다음과 같다. 이 Plot에서 입력 이미지가 어느 쪽에 가까운가를 알게 되면 그 이미지가 어느 숫자에 해당하는지 알 수 있는것이다. 
 
 <figure>
-  <img src="/assets/images/mnist_tsne.png.png" alt="2026-03-08-18-06-57">
+  <img src="/assets/images/mnist_tsne.png" alt="2026-03-08-18-06-57">
   <figcaption>MNIST 데이터셋의 Embedding space. T-SNE 로 차원축소한 결과다.</figcaption>
 </figure>
 
