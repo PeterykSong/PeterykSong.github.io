@@ -3,6 +3,7 @@ layout: archive
 title: "Hardware"
 permalink: /robotics/hardware/
 is_post: false
+is_topic: true
 ---
 
 {% assign robotics_items = site.robotics | where: "tags", "Hardware" | sort: 'date' | reverse %}

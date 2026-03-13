@@ -2,7 +2,7 @@
 layout: archive
 title: "Pattern Recognition"
 permalink: /robotics/pattern_recognition/
-is_post: false
+is_topic: true
 ---
 
 {% assign robotics_items = site.robotics | where: "tags", "Pattern Recognition" | sort: 'date' | reverse %}

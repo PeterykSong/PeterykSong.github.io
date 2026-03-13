@@ -2,6 +2,7 @@
 layout: archive
 title: "PCL_Tutorial"
 permalink: /robotics/PCL_Tutorial
+is_topic: true
 ---
 {% assign PCL_Tutorials = site.categories.PCL_Tutorial  %}
 <ul>
