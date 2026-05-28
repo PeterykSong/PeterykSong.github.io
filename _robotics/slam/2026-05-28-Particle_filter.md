@@ -31,19 +31,20 @@ tags:
 
 
 # 논문 읽어보기
-  이제 고전을 하나 읽어보자. PF 가 유명해지기 시작한 그 첫번째 논문. 
+  이제 고전을 하나 읽어보자. PF 가 유명해지기 시작한 그 첫번째 논문. 1999년 ICRA에서의 일이다. 
 
   F. Dellaert, D. Fox, W. Burgard and S. Thrun, "Monte Carlo localization for mobile robots," Proceedings 1999 IEEE International Conference on Robotics and Automation (Cat. No.99CH36288C), Detroit, MI, USA, 1999, pp. 1322-1328 vol.2, doi: 10.1109/ROBOT.1999.772544.
 
   https://ieeexplore.ieee.org/document/772544
-  또는 https://publications.ri.cmu.edu/storage/publications/pub_files/pub1/dellaert_frank_1999_2/dellaert_frank_1999_2.pdf
+  또는   
+  https://publications.ri.cmu.edu/storage/publications/pub_files/pub1/dellaert_frank_1999_2/dellaert_frank_1999_2.pdf
 
   <figure>
   <img src="/assets/images/2026-05-28-19-03-27.png" style="width:800px !important;"  alt="2026-05-28-19-03-27">
   <figcaption>Particle filter의 원문이다.</figcaption>
 </figure>
 
-  저나 하나하나 모두가 유명하고 레전드들이다. (SLAM분야에 있어서.)
+  저자 하나하나 모두가 유명하고 레전드들이다. (SLAM분야에 있어서.)
   <figure>
   <img src="/assets/images/2026-05-28-19-06-40.png" style="width:600px !important;"  alt="2026-05-28-19-06-40">
   <figcaption>Frank Dellaert</figcaption>
