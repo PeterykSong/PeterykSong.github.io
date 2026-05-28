@@ -80,6 +80,95 @@ Sebastian Thrun, Wolfram Burgard, Dieter Fox 이 셋은 SLAM 학도들의 영원
   <figcaption>2026-05-28-19-16-29</figcaption>
 </figure>
 
+어쨋건 교재와 논문 둘다 한번쯤은 읽어보길 권장한다.   
+여기선 상세히 다룬다기보단, 이런 순서로 PF 가 흘러간다 하는 맥락을 설명해보고자 한다. 
+
+논문의 Introduction을 읽어내려가다보면, 이 논문의 핵심을 짚는 단어가 나온다. 
+
+> In this paper we present the **Monte Carlo Localization**
+method (which we will denote as the MCL-method) where
+we take a different approach to representing uncertainty:
+instead of describing the probability density function itself,
+we represent it by maintaining a set of samples that are ran-
+domly drawn from it. To update this density representation
+over time, we make use of Monte Carlo methods that were
+invented in the seventies, and recently rediscovered in-
+dependently in the target-tracking, statistical and
+computer vision literature
+
+몬테카를로 기법을 이용해서 샘플링을 하고, 업데이트한다가 핵심이다. 
+
+> 1. In contrast to Kalman filtering based techniques, it is
+able to represent multi-modal distributions and thus
+can globally localize a robot.
+
+칼만 필터 방법 대비, 전역 위치 찾기에 장점이 많다는 이야기이다. 실제로 이런 특성 때문에 많이 쓰인다. 
+
+>2. It drastically reduces the amount of memory required compared to grid-based Markov localization, and it can integrate measurements at a considerably higher frequency.
+
+칼만필터스타일은 관측 데이터를 행렬로 표기하기때문에 맵의 크기가 커지면 커질수록 핸들링해야 하는 행렬의 크기가 커진다. 그러다 메모리가 폭주하는데.. 사실 이건 옛날 마이컴에서 SLAM하던 시절 이야기고, 지금은 많이 좋아져서 어떻게든 연산이야 해내겠다마는, PF 방식의 SLAM이 메모리를 덜 차지한다는건 어쩔수 없는 사실이다. 샘플링하는 포인트 개수만큼의 메모리만 있으면 되기 때문에, 맵이 커지면 커질수록 유리해진다. 
+
+> 3. It is more accurate than Markov localization with a fixed cell size, as the state represented in the samples is not discretized.
+
+뭐.... 정확도는 잘 모르겠다............. 다만 대부분의 SLAM Map들이 Grid Map의 형태를 띄고 있으므로 Int형으로 정의하고 연산하기 좋은 PF가 여러모로 편리한 방법일거다. 
+
+>4. It is easy to implement.  
+
+근데, 이건 정말 그렇긴 하다. 
+
+## 논문에서의 수학들. 
+잘 다루고 싶진 않지만(내가 실력이 부족하다.)  
+이 논문에서 반드시 알아야 할 수학적인 개념들은 한번 짚고 넘어가야 한다. 
+
+### 1. Predictive density  
+
+로봇이 센서를 통해 거리값들을 관측했다고 생각해보자. 그리고 그 값을 통해, "여기가 어디지?" 라는 질문을 할 수 있다.   
+
+다른 비유를 해보자.   
+
+지금 당신은 등산을 하고 있.....아니, 낙하산을 타고 있다가 태백산맥 어딘가즈음에 떨어졌다.   
+당신에게 주어진건 나침반 하나와 지도 하나. 이제 내가 어디있는지를 찾아야 한다.   
+
+제일먼저 하는건 랜드마크를 찾아야 한다. 가장 높은 봉오리 3~4개정도를 찾아본다. 그리고 나침반을 이용해 지금 내 위치에서 각 봉오리들까지의 각도값을 측정해냈다.  이 지점에서 봉오리 세개가 그렇게 보일 확율은 얼마일까? 지도 전체에서 무작위로 점을 찍어가다가, 점점 가능성이 높은 후보지를 찾아낼 수 있을 것이다. 그 가능성을 우선 수식으로 표현하면 이렇다는 것이다. 
+
+<figure>
+  <img src="/assets/images/2026-05-28-20-59-48.png" style="width:600px !important;" alt="2026-05-28-20-59-48">
+  <figcaption>Predictive density</figcaption>
+</figure>
+
+X가 뭐고, Z가 뭐고 크게 언급하진 않지만, 앞으로 SLAM 논문에서 X는 로봇의 상태(state vector, x,y,각도같은 위치관련값), Z는 관측값(Measurement,거리와 각도 등), u는 제어입력(속도. 속도.. 음.)이라고만 알고 있자. 
+
+저 식은 적분식이란건데, 지금 로봇이 가지고 있는 관측값들을 비추어 보았을때, 지도의 어떤 포인트가 될 가능성들을 모두 더한다고만 생각하자. 앞서 논문에서 메모리를 많이 안먹는다고 하지만 이 적분식으로 인해 만약 관측값이 무진장하게 많아질 경우 연산량이 증가하는 원인이 된다. (정확하게는 되었었다. 마이컴 시절.)
+
+### 2. Update phase 
+
+어쨌거나 지도상에서 후보지가 서너군데즈음 있다고 가정한다. 여기서 나는 산을 내려가야 하니까, 우선 남쪽으로 이동한다고 가정해보자. 대략 1시간쯤 걸어내려갔고, 나의 이동속도를 감안했을때 얼마만큼 움직였더니, 어라? 좀전에 봤던 봉우리의 각도가 바뀌었다. 
+
+<figure>
+  <img src="/assets/images/2026-05-28-21-07-23.png" style="width:600px !important;" 
+  alt="2026-05-28-21-07-23">
+  <figcaption>2026-05-28-21-07-23</figcaption>
+</figure>
+
+이제 좀전의 후보 포인트들에서, 내가 움직인 값을 반영했을때 확율을 다시 계산할 수 있다. 
+이 업데이트를 통해 확율이 떨어지는 후보는 제외해나가면서, 내가 있는 정확한 위치를 찾아갈 수 있다. 
+
+이게 Particle Filter의 기본 개념이다. 
+
+- 내 관측값들을 이용해서 지금 어디있는지 후보지역을 찾고. 
+- 조금 이동했을때의 관측값의 변화를 가지고 후보지역별 확율을 업데이트해서, 
+- 후보가 아닌것들을 제거하는 과정을 반복한다. 
+
+여기에 좀 더 테크닉들이 들어가면 가중치라는 개념이 들어가고, 다시 샘플링하고, 계산하고 하는 작업들이 반복된다. 
+
+<figure>
+  <img src="/assets/images/2026-05-28-21-15-50.png" style="width:600px !important;" alt="2026-05-28-21-15-50">
+  <figcaption>2026-05-28-21-15-50</figcaption>
+</figure>
+
+대충 개념은 알고 넘어가자. 
+이 이후 Fast-SLAM이라고 해서 파티클 필터를 좀더 빠르게 동작할 수 있도록 정리된게 있는데, 그건 다음기회에 읽어보기로 한다. 
+
 
 # Code Review
 
