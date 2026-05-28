@@ -39,13 +39,13 @@ tags:
   또는 https://publications.ri.cmu.edu/storage/publications/pub_files/pub1/dellaert_frank_1999_2/dellaert_frank_1999_2.pdf
 
   <figure>
-  <img src="/assets/images/2026-05-28-19-03-27.png" style="width:400px !important;"  alt="2026-05-28-19-03-27">
+  <img src="/assets/images/2026-05-28-19-03-27.png" style="width:800px !important;"  alt="2026-05-28-19-03-27">
   <figcaption>Particle filter의 원문이다.</figcaption>
 </figure>
 
   저나 하나하나 모두가 유명하고 레전드들이다. (SLAM분야에 있어서.)
   <figure>
-  <img src="/assets/images/2026-05-28-19-06-40.png" style="width:400px !important;"  alt="2026-05-28-19-06-40">
+  <img src="/assets/images/2026-05-28-19-06-40.png" style="width:600px !important;"  alt="2026-05-28-19-06-40">
   <figcaption>Frank Dellaert</figcaption>
 </figure>
 
