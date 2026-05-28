@@ -98,21 +98,21 @@ computer vision literature
 
 몬테카를로 기법을 이용해서 샘플링을 하고, 업데이트한다가 핵심이다. 
 
-> 1. In contrast to Kalman filtering based techniques, it is
+>   1. In contrast to Kalman filtering based techniques, it is
 able to represent multi-modal distributions and thus
 can globally localize a robot.
 
 칼만 필터 방법 대비, 전역 위치 찾기에 장점이 많다는 이야기이다. 실제로 이런 특성 때문에 많이 쓰인다. 
 
->2. It drastically reduces the amount of memory required compared to grid-based Markov localization, and it can integrate measurements at a considerably higher frequency.
+>  2. It drastically reduces the amount of memory required compared to grid-based Markov localization, and it can integrate measurements at a considerably higher frequency.
 
 칼만필터스타일은 관측 데이터를 행렬로 표기하기때문에 맵의 크기가 커지면 커질수록 핸들링해야 하는 행렬의 크기가 커진다. 그러다 메모리가 폭주하는데.. 사실 이건 옛날 마이컴에서 SLAM하던 시절 이야기고, 지금은 많이 좋아져서 어떻게든 연산이야 해내겠다마는, PF 방식의 SLAM이 메모리를 덜 차지한다는건 어쩔수 없는 사실이다. 샘플링하는 포인트 개수만큼의 메모리만 있으면 되기 때문에, 맵이 커지면 커질수록 유리해진다. 
 
-> 3. It is more accurate than Markov localization with a fixed cell size, as the state represented in the samples is not discretized.
+>  3. It is more accurate than Markov localization with a fixed cell size, as the state represented in the samples is not discretized.
 
 뭐.... 정확도는 잘 모르겠다............. 다만 대부분의 SLAM Map들이 Grid Map의 형태를 띄고 있으므로 Int형으로 정의하고 연산하기 좋은 PF가 여러모로 편리한 방법일거다. 
 
->4. It is easy to implement.  
+>  4. It is easy to implement.  
 
 근데, 이건 정말 그렇긴 하다. 
 
@@ -145,7 +145,7 @@ X가 뭐고, Z가 뭐고 크게 언급하진 않지만, 앞으로 SLAM 논문에
 어쨌거나 지도상에서 후보지가 서너군데즈음 있다고 가정한다. 여기서 나는 산을 내려가야 하니까, 우선 남쪽으로 이동한다고 가정해보자. 대략 1시간쯤 걸어내려갔고, 나의 이동속도를 감안했을때 얼마만큼 움직였더니, 어라? 좀전에 봤던 봉우리의 각도가 바뀌었다. 
 
 <figure>
-  <img src="/assets/images/2026-05-28-21-07-23.png" style="width:600px !important;" 
+  <img src="/assets/images/2026-05-28-21-07-23.png" style="width:400px !important;" 
   alt="2026-05-28-21-07-23">
   <figcaption>2026-05-28-21-07-23</figcaption>
 </figure>
@@ -162,7 +162,7 @@ X가 뭐고, Z가 뭐고 크게 언급하진 않지만, 앞으로 SLAM 논문에
 여기에 좀 더 테크닉들이 들어가면 가중치라는 개념이 들어가고, 다시 샘플링하고, 계산하고 하는 작업들이 반복된다. 
 
 <figure>
-  <img src="/assets/images/2026-05-28-21-15-50.png" style="width:600px !important;" alt="2026-05-28-21-15-50">
+  <img src="/assets/images/2026-05-28-21-15-50.png" style="width:800px !important;" alt="2026-05-28-21-15-50">
   <figcaption>2026-05-28-21-15-50</figcaption>
 </figure>
 
