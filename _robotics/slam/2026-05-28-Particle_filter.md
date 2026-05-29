@@ -465,4 +465,8 @@ def fastslam_step(
 
 ```
 
+## 실습 코드의 실행
+
+[Open in Colab](https://colab.research.google.com/github/peteryksong/peteryksong.github.io/blob/master/assets/notebooks/fastslam_tutorial.ipynb)
+
 # 오늘 요약
