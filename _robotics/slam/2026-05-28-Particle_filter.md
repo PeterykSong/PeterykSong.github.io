@@ -62,7 +62,7 @@ tags:
 </figure>
 
 <figure>
-  <img src="/assets/images/2026-05-28-19-12-02.png" style="width:400px !important;"  alt="2026-05-28-19-12-02">
+  <img src="/assets/images/2026-05-28-19-12-02.png" style="width:60% !important;"  alt="2026-05-28-19-12-02">
   <figcaption>Sebastian Thrun</figcaption>
 </figure>
 
@@ -76,7 +76,7 @@ Sebastian Thrun, Wolfram Burgard, Dieter Fox 이 셋은 SLAM 학도들의 영원
 나땐 저거 배우다 영어의 문턱에서 좌절했었는ㄷ........  
 
 <figure>
-  <img src="/assets/images/2026-05-28-19-16-29.png" style="width:400px !important;" alt="2026-05-28-19-16-29">
+  <img src="/assets/images/2026-05-28-19-16-29.png" style="width:60% !important;" alt="2026-05-28-19-16-29">
   <figcaption>2026-05-28-19-16-29</figcaption>
 </figure>
 
@@ -147,7 +147,7 @@ X가 뭐고, Z가 뭐고 크게 언급하진 않지만, 앞으로 SLAM 논문에
 <figure>
   <img src="/assets/images/2026-05-28-21-07-23.png" style="width:60% !important;" 
   alt="2026-05-28-21-07-23">
-  <figcaption>2026-05-28-21-07-23</figcaption>
+  <figcaption>기본적인 베이지안 확율계산식이다. </figcaption>
 </figure>
 
 이제 좀전의 후보 포인트들에서, 내가 움직인 값을 반영했을때 확율을 다시 계산할 수 있다. 
@@ -163,7 +163,7 @@ X가 뭐고, Z가 뭐고 크게 언급하진 않지만, 앞으로 SLAM 논문에
 
 <figure>
   <img src="/assets/images/2026-05-28-21-15-50.png" style="width:80% !important;" alt="2026-05-28-21-15-50">
-  <figcaption>2026-05-28-21-15-50</figcaption>
+  <figcaption>Fig.3은 탐색을 위해 랜덤으로 샌플링한 포인트들을 나타낸다. Fig 4. 는 확율을 Update 한 이후의 상황. Fig 5. 는 Control 값인 u가 반영된 이후 update된 위치값이다. 이런식으로 로봇의 위치를 업데이트한다. </figcaption>
 </figure>
 
 대충 개념은 알고 넘어가자. 

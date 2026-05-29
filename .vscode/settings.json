@@ -1,5 +1,6 @@
 {
   "pasteImage.path": "${projectRoot}/assets/images",
   "pasteImage.prefix": "",
-  "pasteImage.insertPattern": "<figure>\n  <img src=\"/assets/images/${imageFileName}\" alt=\"${imageFileNameWithoutExt}\">\n  <figcaption>${imageFileNameWithoutExt}</figcaption>\n</figure>"
+  "pasteImage.insertPattern": "<figure>\n  <img src=\"/assets/images/${imageFileName}\" style=\"width:80% !important; height:auto;\" alt=\"${imageFileNameWithoutExt}\">\n  <figcaption>${imageFileNameWithoutExt}</figcaption>\n</figure>"
+
 }
