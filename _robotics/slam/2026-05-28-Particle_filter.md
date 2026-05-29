@@ -10,6 +10,7 @@ related: false
 tags:
   - SLAM
   - Particle Filter
+  - Fast SLAM
   - Monte Carlo
   - Robotics
   
@@ -499,7 +500,14 @@ def fastslam_step(
 ```
 
 ## 실습 코드의 실행
-
+아래 링크를 눌러 모두 실행해보면 제일 마지막에 애니메이션 된 결과를 볼 수 있다. 
 <a href="https://colab.research.google.com/github/peteryksong/peteryksong.github.io/blob/master/assets/notebooks/fastslam_tutorial.ipynb" target="_blank" rel="noopener noreferrer">Open in Colab</a>
 
+<figure>
+  <img src="/assets/images/2026-05-29-20-46-47.png" style="width:80% !important; height:auto;" alt="2026-05-29-20-46-47">
+  <figcaption>2026-05-29-20-46-47</figcaption>
+</figure>
+
+
 # 오늘 요약
+ 화이팅. 
