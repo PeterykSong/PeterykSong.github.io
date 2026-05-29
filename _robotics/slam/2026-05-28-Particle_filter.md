@@ -174,9 +174,11 @@ X가 뭐고, Z가 뭐고 크게 언급하진 않지만, 앞으로 SLAM 논문에
 # Code Review
 
 이 개념을 FastSLAM에서 이어받아 구현했다. 
-
-이걸 이제 실습해보자. 
+그래서 이 코드는 FastSLAM 1.0을 베이스로 한다. 
 코드는 GPT의 도움을 매우 착실하게 받았다. 
+
+
+
 
 
 ## 1. 데이터 구조
@@ -184,7 +186,7 @@ X가 뭐고, Z가 뭐고 크게 언급하진 않지만, 앞으로 SLAM 논문에
 SLAM에서 사용하는 데이터를 생각해보자. 우선 지형정보가 있다. 이걸 우리는 Landmark라고 한다. 그리고 이 지형을 탐험하는 로봇의 위치값이 있다. Location이라고도 하고, Position이라고도 한다. 여기에 자세정보나 속도까지 더해서 Status 또는 Posture, Pose 라고도 한다. 이 로봇을 움직이는 Control Command가 있고, 로봇이 센서로 부터 관측한 정보인 Measurement가 있다. 
 
 
-```Python
+```python
 import numpy as np
 from dataclasses import dataclass, field
 
@@ -211,7 +213,7 @@ class Control:
 
 이제 Map에서 로봇이 어떻게 움직이는가를 정의하자. 
 
-```Python
+```python
 def normalize_angle(angle):
     return (angle + np.pi) % (2 * np.pi) - np.pi
 
@@ -230,7 +232,7 @@ def motion_model(pose, control, dt, noise_std):
 ```
 
 ## 3. Particle의 초기화
-```Python
+```python
 def initialize_particles(num_particles, init_pose):
     particles = []
 
@@ -246,7 +248,7 @@ def initialize_particles(num_particles, init_pose):
 ```
 
 ## 4. Prediction 
-```Python 
+```python 
 def predict_particles(particles, control, dt, motion_noise):
     for p in particles:
         p.pose = motion_model(
@@ -258,7 +260,7 @@ def predict_particles(particles, control, dt, motion_noise):
 ```
 ## 5. Observation Model
 
-```Python
+```python
 z = [range, bearing, landmark_id]
 
 def observation_model(pose, landmark_mu):
@@ -436,13 +438,13 @@ def resample_particles(particles):
 
 ```python
 def fastslam_step(
-    particles,
-    control,
-    measurements,
-    dt,
-    motion_noise,
-    measurement_noise
-):
+                    particles,
+                    control,
+                    measurements,
+                    dt,
+                    motion_noise,
+                    measurement_noise
+                  ):
     # 1. Prediction
     predict_particles(particles, control, dt, motion_noise)
 
