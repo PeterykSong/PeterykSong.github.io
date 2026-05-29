@@ -130,6 +130,11 @@ can globally localize a robot.
 지금 당신은 등산을 하고 있.....아니, 낙하산을 타고 있다가 태백산맥 어딘가즈음에 떨어졌다.   
 당신에게 주어진건 나침반 하나와 지도 하나. 이제 내가 어디있는지를 찾아야 한다.   
 
+<figure>
+  <img src="/assets/images/2026-05-29-17-45-08.png" style="width:80% !important; height:auto;" alt="2026-05-29-17-45-08">
+  <figcaption>비유하자면 이렇다. 요새 챗지피티 참 좋다. </figcaption>
+</figure>
+
 제일먼저 하는건 랜드마크를 찾아야 한다. 가장 높은 봉오리 3~4개정도를 찾아본다. 그리고 나침반을 이용해 지금 내 위치에서 각 봉오리들까지의 각도값을 측정해냈다.  이 지점에서 봉오리 세개가 그렇게 보일 확율은 얼마일까? 지도 전체에서 무작위로 점을 찍어가다가, 점점 가능성이 높은 후보지를 찾아낼 수 있을 것이다. 그 가능성을 우선 수식으로 표현하면 이렇다는 것이다. 
 
 <figure>
@@ -214,6 +219,7 @@ class Control:
 이제 Map에서 로봇이 어떻게 움직이는가를 정의하자. 
 
 ```python
+#각도를 -pi ~ pi로 변환한다. 즉 184도가 -176도가 되도록 한다. 
 def normalize_angle(angle):
     return (angle + np.pi) % (2 * np.pi) - np.pi
 
@@ -232,11 +238,15 @@ def motion_model(pose, control, dt, noise_std):
 ```
 
 ## 3. Particle의 초기화
+Particle filter 알고리즘에서 쓸 파티클들을 초기화한다. 
+
 ```python
 def initialize_particles(num_particles, init_pose):
     particles = []
 
     for _ in range(num_particles):
+        #파티클 클래스 p를 정의한다. 
+        #그걸 particles 리스트에 추가한다. 
         p = Particle(
             pose=init_pose.copy(),
             weight=1.0 / num_particles,
@@ -248,8 +258,13 @@ def initialize_particles(num_particles, init_pose):
 ```
 
 ## 4. Prediction 
+Particle들이 무엇이었는지 다시한번 떠올려보자. 
+그렇다. 바로 로봇의 위치다. 
+사용자 Command에 의해 로봇이 움직였다면 그것에 따라 파티클들을 움직여야 한다. 
+
 ```python 
 def predict_particles(particles, control, dt, motion_noise):
+    # 파티클들을 control 입력에 따라 이동시킨다. 
     for p in particles:
         p.pose = motion_model(
             pose=p.pose,
