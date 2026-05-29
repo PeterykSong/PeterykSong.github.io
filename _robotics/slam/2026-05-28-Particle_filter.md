@@ -294,6 +294,10 @@ def observation_model(pose, landmark_mu):
 
 ## 6. Landmark 초기화
 
+랜드마크 관측값을 초기화한다. 
+각각의 파티클들을 기준으로, 랜드마크의 위치를 계산에서 파티클값에 저장한다. 
+즉, GT(Ground Truth)값이다
+
 ```python
 #r, bearing, landmark_id
 def initialize_landmark(particle, measurement, measurement_noise):
@@ -314,22 +318,26 @@ def initialize_landmark(particle, measurement, measurement_noise):
     )
 
 ```
-## 7. 실제 관측 업데이트 골격
+## 7. 실제 관측 업데이트 
+각 particle이 현재 관측값을 보고 자기 map을 업데이트하고, 관측과 얼마나 잘 맞는지 평가하여 weight를 수정한다
 
 ```python
 def update_particles_with_observations(particles, measurements, measurement_noise):
-    for p in particles:
-        for z in measurements:
-            r, bearing, landmark_id = z
-            landmark_id = int(landmark_id)
+    for p in particles:   #파티클 전체 순회
+        for z in measurements:  #파티클에서 관측한 값 전체 순회
+            r, bearing, landmark_id = z   #관측값을 받아오고, 
+            landmark_id = int(landmark_id)  
 
             if landmark_id not in p.landmarks:
-                initialize_landmark(p, z, measurement_noise)
+                initialize_landmark(p, z, measurement_noise)  #처음 본 랜드마크 id면 초기화하고, 
             else:
-                update_landmark_ekf(p, z, measurement_noise)
+                update_landmark_ekf(p, z, measurement_noise) #이미 본 적 있는 랜드마크면 칼만필터를 통해 업데이트한다. 
 ```
 
 ## 8. Jacobian 계산
+Observation Model을 landmark 위치 주변에서 선형화(linearization)하기 위한 함수  
+sqrt, atan2 같은 함수를 사용하기때문에, 비선형시스템이 되어버린다. 따라서  Jacobian을 이용하여 선형근사한다. 
+EKF 연산에 필요하다. 
 
 ```python 
 def compute_jacobian(pose, landmark_mu):
@@ -364,6 +372,8 @@ def measurement_likelihood(innovation, S):
 
     return norm_const * np.exp(exponent)
 ```
+
+
 ## 10. Landmark EKF Update
 
 ```python
@@ -397,6 +407,8 @@ def update_landmark_ekf(particle, measurement, measurement_noise):
 
     particle.weight *= likelihood
 ```
+
+
 ## 11. Weight Normalize
 ```python
 def normalize_weights(particles):
@@ -413,6 +425,7 @@ def normalize_weights(particles):
 ```
 
 ## 12. Resampling
+확율이 떨어지는 파티클들을 제거하고, 새로운 파티클을 샘플링하는 과정이다. 
 
 ```python
 def resample_particles(particles):
@@ -450,6 +463,11 @@ def resample_particles(particles):
 ```
 
 ## 13. Main,전체 Flow 
+지금까지의 Flow과정을 정리하면 다음과 같다. 
+1. 파티클들의 pose를 control command를 이용해 예측하고,
+2. 파티클들의 관측값을 업데이트한 다음 
+3. 확율이 높은 샘플은 남기고, 낮은 샘플들은 버리는 과정을 반복한다.
+
 
 ```python
 def fastslam_step(
