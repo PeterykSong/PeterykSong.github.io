@@ -8,8 +8,9 @@ topic: slam
 related: false
 
 tags:
-  - Computer Vision
-  - YOLO
+  - SLAM
+  - Particle Filter
+  - Monte Carlo
   - Robotics
   
 ---
@@ -171,5 +172,295 @@ X가 뭐고, Z가 뭐고 크게 언급하진 않지만, 앞으로 SLAM 논문에
 
 
 # Code Review
+
+이 개념을 FastSLAM에서 이어받아 구현했다. 
+
+이걸 이제 실습해보자. 
+코드는 GPT의 도움을 매우 착실하게 받았다. 
+
+
+## 1. 데이터 구조
+가장 먼저 해야 하는건 어떤 데이터를 쓰는가다. 
+SLAM에서 사용하는 데이터를 생각해보자. 우선 지형정보가 있다. 이걸 우리는 Landmark라고 한다. 그리고 이 지형을 탐험하는 로봇의 위치값이 있다. Location이라고도 하고, Position이라고도 한다. 여기에 자세정보나 속도까지 더해서 Status 또는 Posture, Pose 라고도 한다. 이 로봇을 움직이는 Control Command가 있고, 로봇이 센서로 부터 관측한 정보인 Measurement가 있다. 
+
+
+```Python
+import numpy as np
+from dataclasses import dataclass, field
+
+@dataclass
+class Landmark:
+    mu: np.ndarray        # shape: (2,) landmark position [x, y]
+    sigma: np.ndarray     # shape: (2, 2) covariance
+    observed: bool = False
+
+@dataclass
+class Particle:
+    pose: np.ndarray      # shape: (3,) [x, y, theta]
+    weight: float
+    landmarks: dict = field(default_factory=dict)
+
+@dataclass
+class Control:
+    v: float              # linear velocity
+    w: float              # angular velocity
+```
+
+
+## 2. Motion Model
+
+이제 Map에서 로봇이 어떻게 움직이는가를 정의하자. 
+
+```Python
+def normalize_angle(angle):
+    return (angle + np.pi) % (2 * np.pi) - np.pi
+
+
+def motion_model(pose, control, dt, noise_std):
+    x, y, theta = pose
+    v = control.v + np.random.randn() * noise_std[0]
+    w = control.w + np.random.randn() * noise_std[1]
+
+    x_new = x + v * dt * np.cos(theta)
+    y_new = y + v * dt * np.sin(theta)
+    theta_new = theta + w * dt
+    theta_new = normalize_angle(theta_new)
+
+    return np.array([x_new, y_new, theta_new])
+```
+
+## 3. Particle의 초기화
+```Python
+def initialize_particles(num_particles, init_pose):
+    particles = []
+
+    for _ in range(num_particles):
+        p = Particle(
+            pose=init_pose.copy(),
+            weight=1.0 / num_particles,
+            landmarks={}
+        )
+        particles.append(p)
+
+    return particles
+```
+
+## 4. Prediction 
+```Python 
+def predict_particles(particles, control, dt, motion_noise):
+    for p in particles:
+        p.pose = motion_model(
+            pose=p.pose,
+            control=control,
+            dt=dt,
+            noise_std=motion_noise
+        )
+```
+## 5. Observation Model
+
+```Python
+z = [range, bearing, landmark_id]
+
+def observation_model(pose, landmark_mu):
+    x, y, theta = pose
+    mx, my = landmark_mu
+
+    dx = mx - x
+    dy = my - y
+
+    r = np.sqrt(dx**2 + dy**2)
+    bearing = np.arctan2(dy, dx) - theta
+    bearing = normalize_angle(bearing)
+
+    return np.array([r, bearing])
+```
+
+## 6. Landmark 초기화
+
+```python
+r, bearing, landmark_id
+def initialize_landmark(particle, measurement, measurement_noise):
+    r, bearing, landmark_id = measurement
+    x, y, theta = particle.pose
+
+    mx = x + r * np.cos(theta + bearing)
+    my = y + r * np.sin(theta + bearing)
+
+    mu = np.array([mx, my])
+
+    sigma = np.eye(2) * 1.0
+
+    particle.landmarks[int(landmark_id)] = Landmark(
+        mu=mu,
+        sigma=sigma,
+        observed=True
+    )
+
+```
+## 7. 실제 관측 업데이트 골격
+
+```python
+def update_particles_with_observations(particles, measurements, measurement_noise):
+    for p in particles:
+        for z in measurements:
+            r, bearing, landmark_id = z
+            landmark_id = int(landmark_id)
+
+            if landmark_id not in p.landmarks:
+                initialize_landmark(p, z, measurement_noise)
+            else:
+                update_landmark_ekf(p, z, measurement_noise)
+```
+
+## 8. Jacobian 계산
+
+```pyhton
+def compute_jacobian(pose, landmark_mu):
+    x, y, theta = pose
+    mx, my = landmark_mu
+
+    dx = mx - x
+    dy = my - y
+
+    q = dx**2 + dy**2
+    sqrt_q = np.sqrt(q)
+
+    H = np.array([
+        [dx / sqrt_q, dy / sqrt_q],
+        [-dy / q,      dx / q]
+    ])
+
+    return H
+```
+
+## 9. Measurement likelihood 계산
+
+```python
+def measurement_likelihood(innovation, S):
+    dim = len(innovation)
+
+    det_S = np.linalg.det(S)
+    inv_S = np.linalg.inv(S)
+
+    norm_const = 1.0 / np.sqrt((2 * np.pi) ** dim * det_S)
+    exponent = -0.5 * innovation.T @ inv_S @ innovation
+
+    return norm_const * np.exp(exponent)
+```
+## 10. Landmark EKF Update
+
+```python
+def update_landmark_ekf(particle, measurement, measurement_noise):
+    r, bearing, landmark_id = measurement
+    landmark_id = int(landmark_id)
+
+    landmark = particle.landmarks[landmark_id]
+
+    z = np.array([r, bearing])
+
+    z_hat = observation_model(particle.pose, landmark.mu)
+
+    innovation = z - z_hat
+    innovation[1] = normalize_angle(innovation[1])
+
+    H = compute_jacobian(particle.pose, landmark.mu)
+
+    R = measurement_noise
+
+    S = H @ landmark.sigma @ H.T + R
+
+    K = landmark.sigma @ H.T @ np.linalg.inv(S)
+
+    landmark.mu = landmark.mu + K @ innovation
+
+    I = np.eye(2)
+    landmark.sigma = (I - K @ H) @ landmark.sigma
+
+    likelihood = measurement_likelihood(innovation, S)
+
+    particle.weight *= likelihood
+```
+## 11. Weight Normalize
+```python
+def normalize_weights(particles):
+    total_weight = sum(p.weight for p in particles)
+
+    if total_weight == 0:
+        n = len(particles)
+        for p in particles:
+            p.weight = 1.0 / n
+        return
+
+    for p in particles:
+        p.weight /= total_weight
+```
+
+## 12. Resampling
+
+```python
+def resample_particles(particles):
+    n = len(particles)
+
+    weights = np.array([p.weight for p in particles])
+    indices = np.random.choice(
+        np.arange(n),
+        size=n,
+        replace=True,
+        p=weights
+    )
+
+    new_particles = []
+
+    for idx in indices:
+        old_p = particles[idx]
+
+        new_p = Particle(
+            pose=old_p.pose.copy(),
+            weight=1.0 / n,
+            landmarks={
+                lm_id: Landmark(
+                    mu=lm.mu.copy(),
+                    sigma=lm.sigma.copy(),
+                    observed=lm.observed
+                )
+                for lm_id, lm in old_p.landmarks.items()
+            }
+        )
+
+        new_particles.append(new_p)
+
+    return new_particles
+```
+
+## 13. Main,전체 Flow 
+
+```python
+def fastslam_step(
+    particles,
+    control,
+    measurements,
+    dt,
+    motion_noise,
+    measurement_noise
+):
+    # 1. Prediction
+    predict_particles(particles, control, dt, motion_noise)
+
+    # 2. Landmark update + weight update
+    update_particles_with_observations(
+        particles,
+        measurements,
+        measurement_noise
+    )
+
+    # 3. Normalize
+    normalize_weights(particles)
+
+    # 4. Resampling
+    particles = resample_particles(particles)
+
+    return particles
+
+```
 
 # 오늘 요약
