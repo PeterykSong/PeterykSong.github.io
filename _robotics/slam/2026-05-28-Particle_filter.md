@@ -261,7 +261,7 @@ def predict_particles(particles, control, dt, motion_noise):
 ## 5. Observation Model
 
 ```python
-z = [range, bearing, landmark_id]
+#z = [range, bearing, landmark_id]
 
 def observation_model(pose, landmark_mu):
     x, y, theta = pose
@@ -280,7 +280,7 @@ def observation_model(pose, landmark_mu):
 ## 6. Landmark 초기화
 
 ```python
-r, bearing, landmark_id
+#r, bearing, landmark_id
 def initialize_landmark(particle, measurement, measurement_noise):
     r, bearing, landmark_id = measurement
     x, y, theta = particle.pose
@@ -316,7 +316,7 @@ def update_particles_with_observations(particles, measurements, measurement_nois
 
 ## 8. Jacobian 계산
 
-```pyhton
+```python 
 def compute_jacobian(pose, landmark_mu):
     x, y, theta = pose
     mx, my = landmark_mu
@@ -467,6 +467,6 @@ def fastslam_step(
 
 ## 실습 코드의 실행
 
-[Open in Colab](https://colab.research.google.com/github/peteryksong/peteryksong.github.io/blob/master/assets/notebooks/fastslam_tutorial.ipynb)
+<a href="https://colab.research.google.com/github/peteryksong/peteryksong.github.io/blob/master/assets/notebooks/fastslam_tutorial.ipynb" target="_blank" rel="noopener noreferrer">Open in Colab</a>
 
 # 오늘 요약
