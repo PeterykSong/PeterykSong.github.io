@@ -39,6 +39,10 @@ main:
         url: /robotics/pattern_recognition/
       - title: "Hardware"
         url: /robotics/hardware/
+      - title: "Mathematics"
+        url: /robotics/math/
+      - title: "ROS"
+        url: /robotics/ros/
   - title: "Posts"
     url: /year-archive/
   - title: "Portfolio"
