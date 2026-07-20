@@ -3,7 +3,7 @@
 layout: single
 
 title: "Image Filters - Gaussian Filter"
-date: 2026-06-15 00:00:00 +0900
+date: 2026-07-20 12:00:00 +0900
 #last_modified_at: 2021-11-15 14:39:23 +0900
 related: false
 topic : pattern_recognition
