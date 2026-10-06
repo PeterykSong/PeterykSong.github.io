@@ -132,7 +132,7 @@ print("Test :", len(test_raw))
 데이터셋은 약 800MB 정도의 용량을 가지고 있다. 가끔 아무 생각없이 돌리다가 용량 초과될때가 있는데, 미리 주의하자. 
 
 <figure>
-  <img src="/assets/images/2026-10-06-15-15-25.png" style="width:40% !important; height:auto;" alt="2026-10-06-15-15-25">
+  <img src="/assets/images/2026-10-06-15-15-25.png" style="width:60% !important; height:auto;" alt="2026-10-06-15-15-25">
   <figcaption>2026-10-06-15-15-25</figcaption>
 </figure>
 
@@ -359,7 +359,7 @@ print("Masks :", masks.shape)
 출력 형태를 확인해보면, (개,채,행,렬)의 순대로 잘 나옴을 알 수 있다. 혁펜하임 수업 들어봤으면 뭔 뜻인지 알....
 
 <figure>
-  <img src="/assets/images/2026-10-06-15-53-03.png" style="width:40% !important; height:auto;" alt="2026-10-06-15-53-03">
+  <img src="/assets/images/2026-10-06-15-53-03.png" style="width:60% !important; height:auto;" alt="2026-10-06-15-53-03">
   <figcaption>2026-10-06-15-53-03</figcaption>
 </figure>
 
@@ -564,7 +564,7 @@ num_params = sum(
 print(f"Trainable parameters: {num_params:,}")
 ```
 <figure>
-  <img src="/assets/images/2026-10-06-16-43-28.png" style="width:40% !important; height:auto;" alt="2026-10-06-16-43-28">
+  <img src="/assets/images/2026-10-06-16-43-28.png" style="width:60% !important; height:auto;" alt="2026-10-06-16-43-28">
   <figcaption>2026-10-06-16-43-28</figcaption>
 </figure>
 
@@ -599,7 +599,7 @@ print("Output:", logits.shape)
 여기서 Output은 아직 Mask가 아니다. logit으로 출력되므로, 출력값은 -3.2,0.4,2.8,-0.7과 같이 음수/양수가 혼재되어있을 것이다. 이걸 확인해보자. 
 
 <figure>
-  <img src="/assets/images/2026-10-06-16-47-10.png" style="width:50% !important; height:auto;" alt="2026-10-06-16-47-10">
+  <img src="/assets/images/2026-10-06-16-47-10.png" style="width:60% !important; height:auto;" alt="2026-10-06-16-47-10">
   <figcaption>2026-10-06-16-47-10</figcaption>
 </figure>
 
@@ -613,7 +613,7 @@ probabilities = torch.sigmoid(logits)
 ```
 
 <figure>
-  <img src="/assets/images/2026-10-06-16-49-21.png" style="width:50% !important; height:auto;" alt="2026-10-06-16-49-21">
+  <img src="/assets/images/2026-10-06-16-49-21.png" style="width:60% !important; height:auto;" alt="2026-10-06-16-49-21">
   <figcaption>2026-10-06-16-49-21</figcaption>
 </figure>
 
@@ -625,7 +625,7 @@ pred_masks = (probabilities > 0.5).float()
 print("Prediction values:", torch.unique(pred_masks))
 ```
 <figure>
-  <img src="/assets/images/2026-10-06-16-51-00.png" style="width:50% !important; height:auto;" alt="2026-10-06-16-51-00">
+  <img src="/assets/images/2026-10-06-16-51-00.png" style="width:60% !important; height:auto;" alt="2026-10-06-16-51-00">
   <figcaption>2026-10-06-16-51-00</figcaption>
 </figure>
 
@@ -666,7 +666,7 @@ loss = loss_fn(
 print("Loss:", loss.item())
 ```
 <figure>
-  <img src="/assets/images/2026-10-06-17-07-21.png" style="width:40% !important; height:auto;" alt="2026-10-06-17-07-21">
+  <img src="/assets/images/2026-10-06-17-07-21.png" style="width:60% !important; height:auto;" alt="2026-10-06-17-07-21">
   <figcaption>2026-10-06-17-07-21</figcaption>
 </figure>
 
@@ -808,7 +808,7 @@ for epoch in range(EPOCHS):
 실제 학습을 돌려보면 다음과 같은 출력이 나오는걸 확인할 수 있다. 
 
 <figure>
-  <img src="/assets/images/2026-10-06-17-25-56.png" style="width:40% !important; height:auto;" alt="2026-10-06-17-25-56">
+  <img src="/assets/images/2026-10-06-17-25-56.png" style="width:60% !important; height:auto;" alt="2026-10-06-17-25-56">
   <figcaption>2026-10-06-17-25-56</figcaption>
 </figure>
 
@@ -844,7 +844,7 @@ plt.show()
 이런거 잘 해놓으면 나중에 보고서/논문 쓸때 좋다. 
 
 <figure>
-  <img src="/assets/images/2026-10-06-17-29-47.png" style="width:60% !important; height:auto;" alt="2026-10-06-17-29-47">
+  <img src="/assets/images/2026-10-06-17-29-47.png" style="width:80% !important; height:auto;" alt="2026-10-06-17-29-47">
   <figcaption>2026-10-06-17-29-47</figcaption>
 </figure>
 
@@ -1021,7 +1021,7 @@ print(
 )
 ```
 <figure>
-  <img src="/assets/images/2026-10-06-17-36-53.png" style="width:20% !important; height:auto;" alt="2026-10-06-17-36-53">
+  <img src="/assets/images/2026-10-06-17-36-53.png" style="width:40% !important; height:auto;" alt="2026-10-06-17-36-53">
   <figcaption>2026-10-06-17-36-53</figcaption>
 </figure>
 
