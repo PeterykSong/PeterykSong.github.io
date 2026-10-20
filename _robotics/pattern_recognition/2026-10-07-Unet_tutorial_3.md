@@ -499,11 +499,6 @@ prediction 이미지를 봐도, 벽이 충분히 표현된다고 보긴 어려�
 참조하는 논문의 형태와 일치하는데, 그 논문도 256 사이즈의 입력을 사용한다.  
 
 <figure>
-  <img src="/assets/images/2026-10-08-15-36-44.png" style="width:80% !important; height:auto;" alt="2026-10-08-15-36-44">
-  <figcaption>2026-10-08-15-36-44</figcaption>
-</figure>
-
-<figure>
   <img src="/assets/images/2026-10-08-15-37-20.png" style="width:80% !important; height:auto;" alt="2026-10-08-15-37-20">
   <figcaption>2026-10-08-15-37-20</figcaption>
 </figure>
