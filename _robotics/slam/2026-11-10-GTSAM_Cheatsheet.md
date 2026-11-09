@@ -2,7 +2,7 @@
 #order: 70
 layout: single
 title: "Graph SLAM Optimizer Tutorial, GTSAM Cheatsheet"
-date: 2026-11-10 14:00:00 +0900
+date: 2026-11-10 00:00:00 +0900
 #last_modified_at: 2021-11-15 14:39:23 +0900
 is_post: True
 excerpt: "학습"
