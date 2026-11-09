@@ -254,7 +254,7 @@ print("GTSAM: OK")
 이렇게 환경설정이 끝났다. 
 
 
-# GTSAM의 기본 구성 이해
+# 1. GTSAM의 기본 구성 이해
 
 이제 GTSAM을 이용해 SE(2) Pose를 생성하고 상대 변환을 계산해보자. 
 
@@ -642,7 +642,7 @@ $$
 
 앞서 있던 예제를 다시 돌아보자. 
 
-Residual error $e$ 는 구했다. 그럼 $\Simga$ 는? 표준편차를 이용해서 공분산 행렬을 만든다. 
+Residual error $e$ 는 구했다. 그럼 $\Sigma$ 는? 표준편차를 이용해서 공분산 행렬을 만든다. 
 
 - $\sigma_x$ =0.1m
 - $\sigma_y$ =0.1m
