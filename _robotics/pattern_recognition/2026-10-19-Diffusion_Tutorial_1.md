@@ -445,7 +445,7 @@ $$
 DDPM의 대표적인 Objective function은 다음과 같다. 
 
 $$
-L_simple = \mathcal{E}_{x_0,t,\epsilon} \left[ \Vert \epsilon - \epsilon_\theta ( x_t,t)\Vert ^2 \right]
+L_{simple} = \mathcal{E}_{x_0,t,\epsilon} \left[ \Vert \epsilon - \epsilon_\theta ( x_t,t)\Vert ^2 \right]
 $$
 
 수식은 복잡해보이지만, 의미는 간단하다. 실제로 추가한 노이즈와 신경망이 예측한 노이즈를 최대한 비슷하게 만드는 것이다.   
